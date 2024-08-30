@@ -23,19 +23,8 @@
 <header class="main-header header-style-one">
     <div class="header-top">
         <div class="inner-container">
-            <div class="top-left">
-                <ul class="list-style-one">
-                    <li><i class="fa fa-envelope"></i> <a href="mailto:info@vacomputers.com">info@vacomputers.com</a></li>
-                    <li><i class="fa fa-map-marker"></i> <a href="https://maps.app.goo.gl/dAuzu5yLwEQqYbMb9">VA Computers, New Bus Stand to Railway station (Majitha-143601) Distt. Amritsar</a></li>
-                </ul>
-            </div>
-            <div class="top-right">
-                <ul class="social-icon-one">
-                    <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
-                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
-                    <li><a href="#"><span class="fab fa-youtube"></span></a></li>
-                </ul>
-            </div>
+            <div id="top-left" class="top-left"></div>
+            <div id="top-right" class="top-right"></div>
         </div>
     </div>
 
@@ -43,11 +32,14 @@
         <div class="container-fluid">
             <div class="main-box">
                 <div class="logo-box">
-                    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Tronis" title="Tronis"></a></div>
+                    <div class="logo">
+                        <a href="index.html"><img src="images/logo.png" alt="Tronis" title="Tronis"></a>
+                    </div>
                 </div>
+
                 <div class="nav-outer">
                     <nav class="nav main-menu">
-                        <ul class="navigation clearfix"></ul>
+                        <ul id="navigation" class="navigation"></ul>
                     </nav>
                 </div>
                 <div class="outer-box">
@@ -65,38 +57,14 @@
         <div class="menu-backdrop"></div>
         <nav class="menu-box">
             <div class="upper-box">
-                <div class="nav-logo"><a href="../"><img src="images/logo-2.png" alt="" title=""></a></div>
+                <div class="nav-logo">
+                    <a href="../"><img src="images/logo-2.png" alt="" title=""></a>
+                </div>
                 <div class="close-btn"><i class="icon fa fa-times"></i></div>
             </div>
-            <ul class="navigation clearfix"></ul>
-            <ul class="contact-list-one">
-                <li>
-                    <div class="contact-info-box">
-                        <i class="icon lnr-icon-phone-handset"></i>
-                        <span class="title">Call Now</span>
-                        <a href="tel:+9356393094">+91 93563-93094</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="contact-info-box">
-                        <span class="icon lnr-icon-envelope1"></span>
-                        <span class="title">Send Email</span>
-                        <a href="mailto:info@vacomputers.com">info@vacomputers.com</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="contact-info-box">
-                        <span class="icon lnr-icon-clock"></span>
-                        <span class="title">Opening Hours</span>
-                        Mon - Sat 9:00 A.M to 7:00 P.M <br> Sunday - CLOSED
-                    </div>
-                </li>
-            </ul>
-            <ul class="social-links">
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-            </ul>
+            <ul id="mobile-navigation" class="navigation clearfix"></ul>
+            <ul id="contact-list" class="contact-list-one"></ul>
+            <ul id="social-links" class="social-links"></ul>
         </nav>
     </div>
 
@@ -104,12 +72,12 @@
         <div class="auto-container">
             <div class="inner-container">
                 <div class="logo">
-                    <a href="index.html" title=""><img src="images/logo-2.png" alt="" title=""></a>
+                    <a href="index.html"><img src="images/logo-2.png" alt="" title=""></a>
                 </div>
                 <div class="nav-outer">
                     <nav class="main-menu">
                         <div class="navbar-collapse show collapse clearfix">
-                            <ul class="navigation clearfix"></ul>
+                            <ul id="sticky-navigation" class="navigation clearfix"></ul>
                         </div>
                     </nav>
                     <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
@@ -118,7 +86,6 @@
         </div>
     </div>
 </header>
-
 
 
 
@@ -328,7 +295,8 @@
 
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
 <script data-cfasync="false" src="../email-decode.min.js"></script><script src="js/jquery.js"></script>
-<script src="../script.js"></script>
+<script src="../js/app.js"></script>
+
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.fancybox.js"></script>
