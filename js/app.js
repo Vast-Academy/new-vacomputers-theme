@@ -1,7 +1,7 @@
 // Navbar items
 const navbarItems = `
     <li><a href="../">Home</a></li>
-    <li><a href="../projects/">Projects</a></li>
+    <li><a href="../projects/">clients</a></li>
     <li class="dropdown"><a href="#">Services</a>
         <ul>
             <li><a href="../web-development/">Web Development</a></li>
