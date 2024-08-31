@@ -1,7 +1,7 @@
 // Navbar items
 const navbarItems = `
     <li><a href="../">Home</a></li>
-    <li><a href="../projects/">clients</a></li>
+    <li><a href="../projects/">Projects</a></li>
     <li class="dropdown"><a href="#">Services</a>
         <ul>
             <li><a href="../web-development/">Web Development</a></li>
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     <div class="footer-column col-xl-3 col-lg-12 col-md-6">
                         <div class="footer-widget about-widget">
-                            <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+                            <div class="logo"><a href="index.html"><img src="../images/logo.png" alt=""></a></div>
                             <div class="text">At VA Computers, we deliver custom web solutions that prioritize quality and exclusivity. Our unique approach ensures your business stands out with tailor-made websites and applications designed to enhance growth and offer real value for money.</div>
                             <ul class="social-icon-two">
                                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>
