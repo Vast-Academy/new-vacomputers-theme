@@ -2,24 +2,15 @@
 const navbarItems = `
     <li><a href="../">Home</a></li>
     <li><a href="../projects/">Projects</a></li>
-    <li class="dropdown"><a href="">Services</a>
+    <li class="dropdown"><a href="#">Services</a>
         <ul>
             <li><a href="../web-development/">Web Development</a></li>
             <li><a href="../software-development/">Software Development</a></li>
             <li><a href="../digital-marketing/">Digital Marketing</a></li>
         </ul>
     </li>
-    <li class="dropdown"><a href="">Pricing</a>
-     <ul>
-            <li><a href="../personal-website/">Personal Websites</a></li>
-            <li><a href="../small-business-website/">Small Business Websites</a></li>
-            <li><a href="../enterprise-website/">Enterprise Websites</a></li>
-            <li><a href="../web-applications/">Web Applications</a></li>
-            <li><a href="../digital-marketing-plan/">Digital Marketing</a></li>
-            <li><a href="../seo-optimization/">SEO Optimization</a></li>
-        </ul>
-    </li>
-    <li><a href="../about-us/">About</a></li>
+    <li><a href="#">Pricing</a></li>
+    <li><a href="#">About</a></li>
     <li><a href="../contact-us/">Get in Touch</a></li>
     <li><a href="../faq/">FAQ</a></li>
 `;
