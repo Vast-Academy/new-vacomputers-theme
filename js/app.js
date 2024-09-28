@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <form method="post" action="#">
                         <div class="form-group">
                             <input type="email" name="email" class="email" placeholder="Email Address" required>
-                            <button type="button" class="theme-btn"><i class="fa fa-paper-plane"></i></button>
+                            <button type="button" id="newsletterBtn" class="newsletterBtn1" onclick="sendMail()" class="theme-btn"><i onclick="sendMail()" class="fa fa-paper-plane"></i></button>
                         </div>
                     </form>
                 </div>
