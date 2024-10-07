@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans for Website Development</title>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1400px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.active {
+    background-color: #eaeaea;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: left; /* Align left */
+}
+
+.tabs {
+    display: flex;
+    justify-content: flex-start; /* Align tabs to the left */
+    margin-bottom: 20px;
+}
+
+.tabs span {
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.active-tab {
+    border-bottom: 2px solid red;
+    color: red;
+}
+
+.plans-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.plans {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align plans to the right */
+}
+
+.plan-card {
+    display: flex;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    width: 60%; /* Adjust the width of the card to fit content */
+}
+
+.plan-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px 0 0 5px;
+    object-fit: cover;
+}
+
+.plan-info {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.plan-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.plan-info p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.new-price {
+    font-size: 20px;
+    color: red;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #d62828;
+}
+
+/* Celebration Offer */
+.celebration-offer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+    width: 60%;
+}
+
+.celebration-offer img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.celebration-offer p {
+    margin: 10px 0;
+}
+
+.celebration-offer button {
+    background-color: #ff6600;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.celebration-offer button:hover {
+    background-color: #cc5200;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <ul>
+                <li><span class="icon">&#x1F3E0;</span> Home</li>
+                <li><span class="icon">&#x1F4C5;</span> Projects</li>
+                <li><span class="icon">&#x1F4BB;</span> Services</li>
+                <li class="active"><span class="icon">&#x1F4B8;</span> Pricing Plans</li>
+            </ul>
+            <hr>
+            <ul>
+                <li><span class="icon">&#x1F4C4;</span> Website</li>
+                <li><span class="icon">&#x1F4E6;</span> Website Update</li>
+            </ul>
+            <hr>
+            <ul>
+                <li><span class="icon">&#x1F4E2;</span> Today's Offers</li>
+                <li><span class="icon">&#x1F4E7;</span> Contact Us</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1>Pricing Plans For Website Development</h1>
+            <div class="tabs">
+                <span class="active-tab">Individuals</span>
+                <span>Small Business</span>
+                <span>Large Business</span>
+            </div>
+
+            <div class="plans-section">
+                <h2>Website Plans for Individuals</h2>
+                <div class="plans">
+                    <div class="plan-card">
+                        <img src="personal-website.jpg" alt="Personal Website">
+                        <div class="plan-info">
+                            <h3>Personal Website</h3>
+                            <p>For highlighting a journey of skill and success.</p>
+                            <p class="old-price">₹15,000</p>
+                            <p class="new-price">₹9,999</p>
+                            <button>Book A Free Demo</button>
+                        </div>
+                    </div>
+
+                    <div class="plan-card">
+                        <img src="portfolio-website.jpg" alt="Portfolio Website">
+                        <div class="plan-info">
+                            <h3>Portfolio Website</h3>
+                            <p>Showcases an individual’s work, skills, and accomplishments.</p>
+                            <p class="old-price">₹25,000</p>
+                            <p class="new-price">₹14,999</p>
+                            <button>Book A Free Demo</button>
+                        </div>
+                    </div>
+
+                    <div class="plan-card">
+                        <img src="blog-website.jpg" alt="Blog Website">
+                        <div class="plan-info">
+                            <h3>Blog Website</h3>
+                            <p>For sharing regular posts with text and multimedia.</p>
+                            <p class="old-price">₹25,000</p>
+                            <p class="new-price">₹59,999</p>
+                            <button>Book A Free Demo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Website Plans for Small Business</h2>
+            <div class="plans">
+                <div class="plan-card">
+                    <img src="food-court-website.jpg" alt="Food Court Website">
+                    <div class="plan-info">
+                        <h3>Food Court Website</h3>
+                        <p>Showcasing available food vendors, menus, offers, and dining options.</p>
+                        <p class="old-price">₹25,000</p>
+                        <p class="new-price">₹15,999</p>
+                        <button>Book A Free Demo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Celebration Offer Section -->
+    <div class="celebration-offer">
+        <h2>Celebration Offer</h2>
+        <img src="dussehra-offer.jpg" alt="Dussehra Offer">
+        <p>Select any Static Website Plan and get 2 Pages Worth ₹2899 Free. Offer valid till 13 Oct 2024.</p>
+        <button>Get Offer</button>
+    </div>
+</body>
+</html>

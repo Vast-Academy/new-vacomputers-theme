@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.pricing-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #e74c3c;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    color: #333;
+}
+
+.plan-row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.plan-header {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background-color: #f39c12;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.starter-plan .plan-header {
+    background-color: #f39c12;
+}
+
+.basic-plan .plan-header {
+    background-color: #3498db;
+}
+
+.budget-plan .plan-header {
+    background-color: #27ae60;
+}
+
+.popular-plan .plan-header {
+    background-color: #e74c3c;
+}
+
+.freedom-plan .plan-header {
+    background-color: #8e44ad;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.plan-description {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.plan-description p {
+    margin-bottom: 5px;
+}
+
+.buy-btn {
+    background-color: #f1c40f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    background-color: #e67e22;
+}
+
+/* Vertical line separator */
+.plan-row .price + .plan-description::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 50px;
+    background-color: #ddd;
+    margin-right: 20px;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="pricing-container">
+        <h1>Pricing Plans For Static Website Update</h1>
+        <p class="subheading">Please note that these plans are not for adding new sections, pages, or new feature.</p>
+
+        <div class="plan-row starter-plan">
+            <div class="plan-header">Starter Plan</div>
+            <div class="price">₹999</div>
+            <div class="plan-description">
+                <p><strong>Single Update</strong> | Validity 30 days</p>
+                <p>You can update your website in single time in this plan.</p>
+            </div>
+            <button class="buy-btn">Buy Via Whatsapp</button>
+        </div>
+
+        <div class="plan-row basic-plan">
+            <div class="plan-header">Basic Plan</div>
+            <div class="price">₹1599</div>
+            <div class="plan-description">
+                <p><strong>2 Updates</strong> | Validity 60 days</p>
+                <p>You can update your website 2 times in this plan.</p>
+            </div>
+            <button class="buy-btn">Buy Via Whatsapp</button>
+        </div>
+
+        <div class="plan-row budget-plan">
+            <div class="plan-header">Budget Plan</div>
+            <div class="price">₹2499</div>
+            <div class="plan-description">
+                <p><strong>4 Updates</strong> | Validity 90 days</p>
+                <p>You can update your website 4 times in this plan.</p>
+            </div>
+            <button class="buy-btn">Buy Via Whatsapp</button>
+        </div>
+
+        <h2>Update with Sections</h2>
+        <p class="subheading">Please note that these plans are not for adding pages, or new feature.</p>
+
+        <div class="plan-row popular-plan">
+            <div class="plan-header">Popular Plan</div>
+            <div class="price">₹1399</div>
+            <div class="plan-description">
+                <p><strong>Single Update</strong> | Adding up to 2 Sections | Validity 30 days</p>
+                <p>You can update your website 6 times and also you can add up to 4 sections.</p>
+            </div>
+            <button class="buy-btn">Buy Via Whatsapp</button>
+        </div>
+
+        <div class="plan-row freedom-plan">
+            <div class="plan-header">Freedom Plan</div>
+            <div class="price">₹2999</div>
+            <div class="plan-description">
+                <p><strong>2 Updates</strong> | Adding up to 6 Sections | Validity 30 days</p>
+                <p>Fully upgrade or configure your website with no limit restriction.</p>
+            </div>
+            <button class="buy-btn">Buy Via Whatsapp</button>
+        </div>
+
+        <!-- Add other plans similarly -->
+    </div>
+
+</body>
+</html>
