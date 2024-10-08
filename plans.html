@@ -267,55 +267,43 @@ button.offer-btn:hover {
     color: #ff3333;
     cursor: pointer;
 }
-h2.upper-section-title{
+h2.upper-section-title,
+h2.section-title,
+h2.title{
     position: relative;
             margin-top: 80px;
             padding-bottom: 10px;
-            font-size: 20px;
+            font-size: 18px;
             /* margin-left: -30px; */
             text-align: left;    
 }
 h2.upper-section-title::after{
     content: "";
     position: absolute; 
-    left: 265px; 
+    left: 231px; 
     right: 0; 
     bottom: 20px; 
-    height: 2px; 
+    height: 1px; 
     background-color: grey; 
 }
-        h2.section-title {
-            position: relative;
-            margin-top: 80px;
-            padding-bottom: 10px;
-            font-size: 20px;
-            /* margin-left: -30px; */
-            text-align: left;
-        }
-        .section-title::after {
+       
+.section-title::after {
     content: "";
     position: absolute; 
-    left: 230px; 
+    left: 200px; 
     right: 0; 
     bottom: 20px; 
-    height: 2px; 
+    height: 1px; 
     background-color: grey; 
 }
-h2.title {
-            position: relative;
-            margin-top: 80px;
-            padding-bottom: 10px;
-            font-size: 20px;
-            /* margin-left: -30px; */
-            text-align: left;
-        }
+
 h2.title::after {
     content: "";
     position: absolute; 
-    left: 130px; 
+    left: 115px; 
     right: 0; 
     bottom: 20px; 
-    height: 2px; 
+    height: 1px; 
     background-color: grey; 
 }
 .subtitle {
@@ -329,17 +317,17 @@ h2.title::after {
 
 .pricing-card {
             background: white;
-            /* border-radius: 8px; */
+            border-radius: 4px;
             padding: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow:
-        2px 2px 5px 3px rgba(0, 0, 0, 0.1),  /* right-bottom */
-        -2px -2px 5px 3px rgba(0, 0, 0, 0.1), /* left-top */
-        2px -2px 5px 3px rgba(0, 0, 0, 0.1),  /* right-top */
-        -2px 2px 5px 3px rgba(0, 0, 0, 0.1);  /* left-bottom */
+        2px 2px 5px 3px rgba(0, 0, 0, 0.05),  /* right-bottom */
+        -2px -2px 5px 3px rgba(0, 0, 0, 0.05), /* left-top */
+        2px -2px 5px 3px rgba(0, 0, 0, 0.05),  /* right-top */
+        -2px 2px 5px 3px rgba(0, 0, 0, 0.05);  /* left-bottom */
         }
         .pricing-starting{
             /* width: 500px; */
@@ -423,12 +411,18 @@ h2.title::after {
         font-weight: bold;
         font-size: 13px;
     }
+    .pricing-starting{
+        align-items: center;
+    }
     .pricing-card {
-      /*  width: 900px;*/
-        /* height: 80px; */
+       width: 900px;
+        height: 90px;
         padding: 15px;
         margin: 15px 0;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+    }
+    .vertical-separator{
+        height: 90px;
     }
     .sidebar-offer{
         width: 316px;
@@ -447,6 +441,11 @@ h2.title::after {
     }
     .tab:active{
         background-color: #f7f7f7;
+    }
+    h2.upper-section-title,
+    h2.section-title,
+    h2.title{
+        font-size: 18px;
     }
 }
 
@@ -468,12 +467,18 @@ h2.title::after {
     }
     .pricing-card {
         width: 800px;
+        height: 100px;
         padding: 15px;
         margin: 10px 0;
         margin-bottom: 20px;
     }
     .vertical-separator{
         height: 100px;
+    }
+    h2.upper-section-title,
+    h2.section-title,
+    h2.title{
+        font-size: 17px;
     }
     .plan-tag{
         font-size: 12px;
@@ -547,7 +552,7 @@ h2.title::after {
     }
     .pricing-card {
         width: 750px; 
-        height: 110px;
+        height: 105px;
         padding: 10px;
         margin: 8px 0;
         margin-bottom: 20px;
@@ -556,12 +561,43 @@ h2.title::after {
         font-size: 17px;
         font-weight: 600;
     }
-
+    h2.upper-section-title,
+    h2.section-title,
+    h2.title{
+        font-size: 16px;
+    }
+    .upper-section-title::after {
+    content: "";
+    position: absolute; 
+    left: 175px; 
+    right: 0; 
+    bottom: 20px; 
+    height: 1px; 
+    background-color: grey; 
+}
+    .section-title::after {
+    content: "";
+    position: absolute; 
+    left: 185px; 
+    right: 0; 
+    bottom: 20px; 
+    height: 1px; 
+    background-color: grey; 
+}
+.title::after {
+    content: "";
+    position: absolute; 
+    left: 175px; 
+    right: 0; 
+    bottom: 20px; 
+    height: 1px; 
+    background-color: grey; 
+}
     .sidebar-offer {
         width: 200px; 
     }
     .vertical-separator{
-        height: 100px;
+        height: 105px;
     }
     .offer-box h3{
         font-size: 16px;
