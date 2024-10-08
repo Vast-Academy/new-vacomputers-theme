@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Contact Us | VA Computers</title>
+<title>Website Updates | VA Computers</title>
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -94,7 +94,7 @@ ul.menu li{
 .main-content {
     flex-grow: 1;
     padding: 20px;
-    background-color: #f7f7f7;
+    background-color: #ffffff;
     overflow: scroll;
     scroll-behavior: smooth;
 }
@@ -329,13 +329,17 @@ h2.title::after {
 
 .pricing-card {
             background: white;
-            border-radius: 8px;
+            /* border-radius: 8px; */
             padding: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow:
+        2px 2px 5px 3px rgba(0, 0, 0, 0.1),  /* right-bottom */
+        -2px -2px 5px 3px rgba(0, 0, 0, 0.1), /* left-top */
+        2px -2px 5px 3px rgba(0, 0, 0, 0.1),  /* right-top */
+        -2px 2px 5px 3px rgba(0, 0, 0, 0.1);  /* left-bottom */
         }
         .pricing-starting{
             /* width: 500px; */
@@ -424,6 +428,7 @@ h2.title::after {
         /* height: 80px; */
         padding: 15px;
         margin: 15px 0;
+        margin-bottom: 30px;
     }
     .sidebar-offer{
         width: 316px;
@@ -456,6 +461,7 @@ h2.title::after {
     .main-content {
         padding: 20px;
         width: 950px; 
+
     }
     .pricing-starting{
         align-items: center;
@@ -464,6 +470,7 @@ h2.title::after {
         width: 800px;
         padding: 15px;
         margin: 10px 0;
+        margin-bottom: 20px;
     }
     .vertical-separator{
         height: 100px;
