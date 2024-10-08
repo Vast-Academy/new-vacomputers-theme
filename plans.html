@@ -256,6 +256,23 @@ h2.upper-section-title::after{
     height: 2px; 
     background-color: grey; 
 }
+h2.title {
+            position: relative;
+            margin-top: 80px;
+            padding-bottom: 10px;
+            font-size: 20px;
+            /* margin-left: -30px; */
+            text-align: left;
+        }
+h2.title::after {
+    content: "";
+    position: absolute; 
+    left: 130px; 
+    right: 0; 
+    bottom: 20px; 
+    height: 2px; 
+    background-color: grey; 
+}
 .subtitle {
             text-align: center;
             color: #c40000;
@@ -298,13 +315,14 @@ h2.upper-section-title::after{
         .plan-details h3 {
             font-size: 18px;
             margin-top: 10px;
-            margin-bottom: -3px;
+            margin-bottom: 8px;
             font-weight: bold;
         }
         .plan-details p {
             margin: 0;
-            color:#c40000;
+            color:#6d706f;
             font-size: 14px;
+            line-height: 1.2em;
         }
         .vertical-separator {
     border-left: 2px solid #ddd;
@@ -325,6 +343,8 @@ h2.upper-section-title::after{
  }
         ul.notice li{
             list-style-type:disc;
+            color: #c40000;
+            line-height: 1.3em;
             /* margin-top: -10px; */
         }
 
@@ -339,7 +359,13 @@ h2.upper-section-title::after{
         padding: 30px;
         width: 1254px;
     }
-    
+    .subtitle{
+        font-size: 16px;
+    }
+    .plan-tag{
+        font-weight: bold;
+        font-size: 13px;
+    }
     .pricing-card {
       /*  width: 900px;*/
         /* height: 80px; */
@@ -360,31 +386,127 @@ h2.upper-section-title::after{
     }
 }
 
-/* Tablet (768x1024) */
 @media screen and (max-width: 1366px) {
     .sidebar {
-        width: 250px; /* Keeping the same as it should still fit comfortably */
+        width: 250px;
+    }
+    .subtitle{
+        font-size: 15px;
+        line-height: 1.3em;
     }
     .main-content {
         padding: 20px;
         width: 950px; 
     }
-    
+    .pricing-starting{
+        align-items: center;
+    }
     .pricing-card {
         width: 800px;
         padding: 15px;
         margin: 10px 0;
     }
+    .vertical-separator{
+        height: 100px;
+    }
+    .plan-tag{
+        font-size: 12px;
+        font-weight: bold;
+    }
     .sidebar-offer{
-        width: 230px; /* Adjusted for the smaller screen */
+        width: 230px; 
+    }
+    .offer-box h3{
+        font-size: 17px;
+    }
+    .offer-box{
+        height: 570px;
+    }
+    .offer-box .offer-btn{
+        width: 150px;
     }
     .tab{
-        width: 150px; /* Reduced the tab width */
+        width: 150px; 
         height: 40px;
         padding: 2px;
         text-align: center;
     }
     .tab:active{
+        background-color: #f7f7f7;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .sidebar {
+        width: 220px; 
+    }
+    .sidebar .menu li{
+        font-size: 14px;
+    }
+    .main-content {
+        padding: 15px;
+        width: 860px; 
+    }
+    .pricing-section h2{
+        font-size: 28px;
+    }
+    h2.upper-section-title{
+        font-size: 20px;
+    }
+    h2.section-title{
+        font-size: 20px;
+    }
+    h2.title{
+        font-size: 20px;
+    }
+    .pricing-starting{
+        align-items: center;
+    }
+    .pricing-card {
+        width: 750px; 
+        height: 110px;
+        padding: 10px;
+        margin: 8px 0;
+        margin-bottom: 20px;
+    }
+    .plan-details h3{
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    .sidebar-offer {
+        width: 200px; 
+    }
+    .vertical-separator{
+        height: 100px;
+    }
+    .offer-box h3{
+        font-size: 16px;
+        font-weight: 300;
+    }
+    .offer-box{
+        height: 530px;
+    }
+    .plan-tag{
+        font-size: 11px;
+        font-weight: bold;
+    }
+    .offer-box .offer-btn{
+        font-size: 12px;
+        width: 100px;
+    }
+    .subtitle{
+        font-size: 14px;
+        line-height: 1.3em;
+    }
+    .tab {
+        width: 130px; 
+        height: 35px;
+        padding: 2px;
+        text-align: center;
+    }
+
+    .tab:active {
         background-color: #f7f7f7;
     }
 }
@@ -686,7 +808,7 @@ h2.upper-section-title::after{
             <button class="buy-button">Buy Via Whatsapp</button>
         </div>
 
-        <h2 class="section-title">Add Section</h2>
+        <h2 class="title">Add Section</h2>
 
         <div class="pricing-card">
             <div class="pricing-starting">
@@ -703,7 +825,7 @@ h2.upper-section-title::after{
             <button class="buy-button">Buy Via Whatsapp</button>
         </div>
 
-        <h2 class="section-title">Add Pages</h2>
+        <h2 class="title">Add Pages</h2>
         <p class="subtitle">Please note that a Each page will contain a single type of information and will not be multi-purpose.</p>
 
         <div class="pricing-card">
@@ -766,7 +888,7 @@ h2.upper-section-title::after{
             <button class="buy-button">Buy Via Whatsapp</button>
         </div>
 
-        <h3 style="color: #c40000;font-size: 22px;margin-top: 30px;">Important Notice:</h3>
+        <h3 style="color: #c40000;font-size: 20px;margin-top: 30px;">Important Notice:</h3>
         <ul class="notice">
             <li>
                 Website updates will require all information to be provided in writing. If any mistakes are found, corrections will only be made in the next update.
