@@ -34,7 +34,9 @@
   list-style: none;
   /* margin-bottom: 40px; */
 }
-
+ul.menu li{
+    margin-bottom: 5px;
+}
 .menu-item {
   display: flex;
   align-items: center;
@@ -57,7 +59,7 @@
 
 .separator {
   border: none;
-  border-top: 1px solid #ddd;
+  border-top: 2px solid #8a8787;
   margin: 15px 0;
 }
 
@@ -79,6 +81,7 @@
   display: flex;
   align-items: center;
   padding: 10px;
+  margin-bottom: 5px;
   font-size: 18px;
 }
 
@@ -90,7 +93,7 @@
 /* Main Content */
 .main-content {
     flex-grow: 1;
-    /* padding: 20px; */
+    padding: 20px;
     background-color: #f7f7f7;
     overflow: scroll;
     scroll-behavior: smooth;
@@ -102,16 +105,15 @@ div.main-tab{
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-    background-color: white;
+    /* background-color: white;
 width: 100%;
 height: 80px;
-position: sticky;
-top: 0px; /* Sticks to the top of the page */
-    z-index: 1000; /* Ensures it stays above other content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+position: ; */
 }
 .tabs{
     width: 400px;
+    /* background-color: white; */
+    /* border: 1px solid black; */
 }
 .tabs ul{
     display: flex;
@@ -259,6 +261,12 @@ transition-timing-function: cubic-bezier(.86, 0, .07, 1);
     border-radius: 40px;
     cursor: pointer;
 }
+button.offer-btn:hover {
+    background-color: transparent;
+    border: 1px solid #ff3333;
+    color: #ff3333;
+    cursor: pointer;
+}
 h2.upper-section-title{
     position: relative;
             margin-top: 80px;
@@ -394,10 +402,8 @@ h2.title::after {
         width: 338px;
     }
     .main-content {
-        /* padding: 30px; */
-        width: 1254px;
-    }.pricing-section{
         padding: 30px;
+        width: 1254px;
     }
     .subtitle{
         font-size: 16px;
@@ -417,6 +423,9 @@ h2.title::after {
     }
     .offer-box h3{
         font-size: 24px;
+    }
+    .offer-box{
+        height: 700px;
     }
     .tab{
         width: 185px;
@@ -438,11 +447,8 @@ h2.title::after {
         line-height: 1.3em;
     }
     .main-content {
-        /* padding: 20px; */
-        width: 950px; 
-    }
-    .plans{
         padding: 20px;
+        width: 950px; 
     }
     .pricing-starting{
         align-items: center;
@@ -507,11 +513,8 @@ h2.title::after {
         font-size: 14px;
     }
     .main-content {
-        /* padding: 15px; */
-        width: 860px; 
-    }
-    .plans{
         padding: 15px;
+        width: 860px; 
     }
     .pricing-section h2{
         font-size: 28px;
@@ -717,7 +720,7 @@ h2.title::after {
     <!-- Sidebar -->
     <div class="sidebar">
         <ul class="menu">
-          <li class="menu-item active">
+          <li class="menu-item">
             <i class="fas fa-home"></i> Home
           </li>
           <li class="menu-item">
@@ -726,7 +729,7 @@ h2.title::after {
           <li class="menu-item">
             <i class="fas fa-cogs"></i> Services
           </li>
-          <li class="menu-item">
+          <li class="menu-item active">
             <i class="fas fa-file-invoice-dollar"></i> Pricing Plans
           </li>
         </ul>
@@ -737,10 +740,10 @@ h2.title::after {
         <div class="sub-menu">
           <h3>Pricing Plans</h3>
           <ul class="menu">
-            <li class="menu-item active">
+            <li class="menu-item">
                 <i class="fas fa-briefcase"></i> Website Plans
             </li>
-            <li class="menu-item">
+            <li class="menu-item active">
                 <i class="fas fa-sync-alt"></i> Website Update
             </li>
             <!-- <li class="menu-item">
