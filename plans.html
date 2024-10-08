@@ -90,7 +90,7 @@
 /* Main Content */
 .main-content {
     flex-grow: 1;
-    padding: 20px;
+    /* padding: 20px; */
     background-color: #f7f7f7;
     overflow: scroll;
     scroll-behavior: smooth;
@@ -102,10 +102,16 @@ div.main-tab{
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+    background-color: white;
+width: 100%;
+height: 80px;
+position: sticky;
+top: 0px; /* Sticks to the top of the page */
+    z-index: 1000; /* Ensures it stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .tabs{
     width: 400px;
-    /* border: 1px solid black; */
 }
 .tabs ul{
     display: flex;
@@ -113,7 +119,8 @@ div.main-tab{
     align-items: center;
 }
 
-.tabs ul li{
+.tabs ul li,
+.tabs ul li a{
     position: relative;
 display: inline-block;
 line-height: 24px;
@@ -129,7 +136,24 @@ transition: all 300ms ease;
 .tabs ul li:hover{
     color: black;
 }
+.tabs ul li a.active,
+.tabs ul li a:hover{
+    color: black;
+}
 .tabs ul li:before{
+    position: absolute;
+left: 0;
+bottom: 8px;
+height: 2px;
+width: 100%;
+content: "";
+background-color: #c40000;
+transform: scale(0, 1);
+transform-origin: top right;
+transition: transform 500ms cubic-bezier(.86, 0, .07, 1);
+transition-timing-function: cubic-bezier(.86, 0, .07, 1);
+}
+.tabs ul li a:before{
     position: absolute;
 left: 0;
 bottom: 8px;
@@ -212,7 +236,20 @@ transition-timing-function: cubic-bezier(.86, 0, .07, 1);
 .offer-details {
     text-align: center;
 }
-
+.offer-box .offer-details .offer-heading span{
+    font-weight: bold;
+    font-size: 24px;
+}
+.offer-box .offer-details .offer-subheading{
+    margin-top: -30px;
+}
+.offer-box .offer-details .offer-subheading span{
+    font-weight: bold;
+    font-size: 22px;
+}
+.offer-box .offer-details .offer-valid{
+    color: #c40000;
+}
 .offer-btn {
     background-color: #ff3333;
     border: none;
@@ -338,6 +375,7 @@ h2.title::after {
             cursor: pointer;
             font-weight: bold;
         }
+        
  ul.notice{
     margin-top: -5px;
  }
@@ -356,8 +394,10 @@ h2.title::after {
         width: 338px;
     }
     .main-content {
-        padding: 30px;
+        /* padding: 30px; */
         width: 1254px;
+    }.pricing-section{
+        padding: 30px;
     }
     .subtitle{
         font-size: 16px;
@@ -374,6 +414,9 @@ h2.title::after {
     }
     .sidebar-offer{
         width: 316px;
+    }
+    .offer-box h3{
+        font-size: 24px;
     }
     .tab{
         width: 185px;
@@ -395,8 +438,11 @@ h2.title::after {
         line-height: 1.3em;
     }
     .main-content {
-        padding: 20px;
+        /* padding: 20px; */
         width: 950px; 
+    }
+    .plans{
+        padding: 20px;
     }
     .pricing-starting{
         align-items: center;
@@ -422,6 +468,23 @@ h2.title::after {
     .offer-box{
         height: 570px;
     }
+    .offer-box .offer-details .offer-heading span{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .offer-box .offer-details .offer-heading{
+        font-size: 12px;
+    }
+    .offer-box .offer-details .offer-subheading{
+        font-size: 12px;
+    }
+    .offer-box .offer-details .offer-subheading span{
+        font-size: 16px;
+    }
+    .offer-box .offer-details .offer-valid{
+        font-size: 11px;
+    }
+
     .offer-box .offer-btn{
         width: 150px;
     }
@@ -444,8 +507,11 @@ h2.title::after {
         font-size: 14px;
     }
     .main-content {
-        padding: 15px;
+        /* padding: 15px; */
         width: 860px; 
+    }
+    .plans{
+        padding: 15px;
     }
     .pricing-section h2{
         font-size: 28px;
@@ -486,6 +552,7 @@ h2.title::after {
     }
     .offer-box{
         height: 530px;
+        width: 170px;
     }
     .plan-tag{
         font-size: 11px;
@@ -494,6 +561,24 @@ h2.title::after {
     .offer-box .offer-btn{
         font-size: 12px;
         width: 100px;
+    }
+    .offer-box .offer-details .offer-heading span{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .offer-box .offer-details .offer-heading{
+        font-size: 10px;
+    }
+    .offer-box .offer-details .offer-subheading{
+        font-size: 10px;
+        margin-top: -35px;
+    }
+    .offer-box .offer-details .offer-subheading span{
+        font-size: 15px;
+        margin-top: -15px;
+    }
+    .offer-box .offer-details .offer-valid{
+        font-size: 8px;
     }
     .subtitle{
         font-size: 14px;
@@ -642,7 +727,7 @@ h2.title::after {
             <i class="fas fa-cogs"></i> Services
           </li>
           <li class="menu-item">
-            <i class="fas fa-file-invoice-dollar"></i>&nbsp; Pricing Plans
+            <i class="fas fa-file-invoice-dollar"></i> Pricing Plans
           </li>
         </ul>
     
@@ -687,7 +772,7 @@ h2.title::after {
         <div class="tabs">
             <ul>
                 <li class="tab-btn active" data-filter="website-update">Website Update</li>
-                <li class="tab-btn" data-filter="adding-pages">Adding Pages</li>
+                <li class="tab-btn" data-filter="adding-pages"><a href="#add-pages">Adding Pages</a></li>
                 <!-- <li class="tab-btn" data-filter="adding-features">Adding Features</li> -->
             </ul>
         </div>
@@ -825,7 +910,7 @@ h2.title::after {
             <button class="buy-button">Buy Via Whatsapp</button>
         </div>
 
-        <h2 class="title">Add Pages</h2>
+        <h2 class="title" id="add-pages">Add Pages</h2>
         <p class="subtitle">Please note that a Each page will contain a single type of information and will not be multi-purpose.</p>
 
         <div class="pricing-card">
@@ -907,11 +992,12 @@ h2.title::after {
         <div class="offer-box">
         <h3>Celebration Offer</h3>
 
-            <img src="https://fakeimg.pl/80x130" alt="Offer Image">
+            <img src="./images/offer.png" alt="Offer Image">
             <div class="offer-details">
-                <p><b>Diwali Offer</b><br> 2 Updates free on 90 Days Plan! </p>
-                <p></p>
-                <br>
+                <p class="offer-heading"><span>Dussehra Offer</span> <br> Buy any update plan  and </p>
+                <p class="offer-subheading">Get 1 section update <br>
+                    <span>Worth <sup>₹</sup>299</span> </p>
+                <p class="offer-valid">Offer Valid Till 13 Oct 2024</p>
                 <button class="offer-btn">Get Offer</button>
             </div>
         </div>
