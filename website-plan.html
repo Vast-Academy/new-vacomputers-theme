@@ -267,19 +267,19 @@ h2.upper-section-title::after{
 
 .pricing-card {
             background: white;
-            /* border-radius: 8px; */
-            height: 180px;
-            /* padding: 15px; */
-            margin-bottom: 20px;
+            border-radius: 4px;
+            height: 160px;
+            margin-bottom: 30px;
             display: flex;
             justify-content: space-between;
             /* align-items: center; */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow:
+        2px 2px 5px 3px rgba(0, 0, 0, 0.05),  /* right-bottom */
+        -2px -2px 5px 3px rgba(0, 0, 0, 0.05), /* left-top */
+        2px -2px 5px 3px rgba(0, 0, 0, 0.05),  /* right-top */
+        -2px 2px 5px 3px rgba(0, 0, 0, 0.05);  /* left-bottom */
         }
-        .pricing-starting{
-            /* width: 500px; */
-            display: flex;
-        }
+       
         .plan-details{
             width: 500px;
         }
@@ -287,24 +287,57 @@ h2.upper-section-title::after{
         text-align: left;
         font-size: 24px;
        }
-       .plan-details .website
+       
         .plan-info img{
             width: 250px;
+            /* height: 200px; */
         }
         .website-info{
             display: flex;
-            justify-content: space-evenly;
-            padding: 15px;
+            justify-content: space-between;
+            /* padding: 15px; */
             /* align-items: center; */
         }
         .website-price{
             text-align: center;
         }
-        
+        .plan-details{
+            margin-left: 20px;
+        }
+        .plan-details h2{
+            margin-top: 20px;
+            font-size: 23px;
+        }
+        .website-desc{
+            line-height: 1.2em;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .website-content{
+            line-height: 1.5em;
+            /* font-size: 12px; */
+        }
+        .website-price{
+            margin-right: 20px;
+        }
+        .website-price h3{
+            font-size: 30px;
+            text-align: center;
+        }
+        .website-price button{
+            border: none;
+            border-radius: 8px;
+            width: 165px;
+            background-color: #c40000;
+            color: white;
+            font-weight: bold;
+        }
         .new-price {
     color: black; 
     position: relative; 
-    font-size: 21px;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 0;
 }
 
 .strikethrough {
@@ -316,10 +349,10 @@ h2.upper-section-title::after{
     position: absolute;
     left: 0;
     right: 0;
-    top: 50%; /* Adjust as necessary for line placement */
-    height: 1px; /* Line thickness */
-    background-color: red; /* Color of the strikethrough */
-    z-index: 1; /* Ensure it appears above the text */
+    top: 50%; 
+    height: 1px; 
+    background-color: #c40000; 
+    z-index: 1; 
 }
 
         .plan-tag {
@@ -334,19 +367,9 @@ h2.upper-section-title::after{
             font-size: 24px;
             font-weight: bold;
         }
-        .plan-details h3 {
-            font-size: 18px;
-            margin-top: 10px;
-            margin-bottom: -3px;
-            font-weight: bold;
-        }
-        .plan-details p {
-            margin: 0;
-            color:black;
-            font-size: 14px;
-        }
+        
         .vertical-separator {
-    border-right: 2px solid #ddd;
+    border-right: 2px solid #a09c9c;
     /* height: 175px; */
     margin: 0 10px;
 }
@@ -380,10 +403,10 @@ h2.upper-section-title::after{
     }
     
     .pricing-card {
-        width: 900px;
+        /* width: 900px; */
         /* height: 80px; */
         /* padding: 15px; */
-        margin: 15px 0;
+        margin-bottom: 20px;
     }
     .sidebar-offer{
         width: 316px;
@@ -629,22 +652,20 @@ h2.upper-section-title::after{
         <div class="plans">
         <div class="pricing-section">
             <h2>Pricing Plans For Static Website Update</h2>
-            <!-- <p class="note">Please note that these plans are not for adding new sections, pages, or new features.</p> -->
-            <h2 class="upper-section-title">Website Content Update</h2>
+
+            <h2 class="upper-section-title">Website Plans for Individuals</h2>
            
 
             <div class="main-pricing">
                 <div class="pricing-card">
-                    <div class="pricing-starting">
                     <div class="plan-info">
-                        <img src="https://fakeimg.pl/250x200" alt="">
+                        <img src="./images/personal website.jpg" alt="">
                        </div>
                        <div class="website-info">
                     <div class="plan-details">
                         <h2>Personal Website</h2>
                         <p class="website-desc">For Highlighting A Journey Of Skill And Success</p>
-                        <br>
-                        <p>Up to 6 Pages website | SEO Optimization | 1 Year Free Maintenance <br> Get 4 Free Content Updates within 30 Days after Project Completion</p>
+                        <p class="website-content">Up to 6 Pages website | SEO Optimization | 1 Year Free Maintenance <br> Get 4 Free Content Updates within 30 Days after Project Completion</p>
                     </div>
                     <div class="vertical-separator"></div>
                     <div class="website-price">
@@ -652,88 +673,79 @@ h2.upper-section-title::after{
                             <span class="strikethrough">₹15000</span>
                         </p>                        
                         <h3>₹9999</h3>
+                        <button>Book A Free Demo</button>
                     </div>
                 </div>
-
             </div>
                     
+            <div class="pricing-card">
+                <div class="plan-info">
+                    <img src="./images/portfolio website.jpg" alt="">
+                   </div>
+                   <div class="website-info">
+                <div class="plan-details">
+                    <h2>Personal Website</h2>
+                    <p class="website-desc">For Highlighting A Journey Of Skill And Success</p>
+                    <p class="website-content">Up to 6 Pages website | SEO Optimization | 1 Year Free Maintenance <br> Get 4 Free Content Updates within 30 Days after Project Completion</p>
                 </div>
-    
-                <div class="pricing-card">
-                    <div class="pricing-starting">
-                    <div class="plan-info">
-                        <div class="plan-tag">Basic Plan</div>
-                        <div class="price">₹1599</div>
-                    </div>
-                    <div class="vertical-separator"></div>
-                    <div class="plan-details">
-                        <h3>2 Updates | Validity 60 days</h3>
-                        <p>You can update your website twice within 60 Days</p>
-                    </div>
+                <div class="vertical-separator"></div>
+                <div class="website-price">
+                    <p class="new-price">
+                        <span class="strikethrough">₹15000</span>
+                    </p>                        
+                    <h3>₹9999</h3>
+                    <button>Book A Free Demo</button>
                 </div>
-                    <button class="buy-button">Buy Via Whatsapp</button>
-                </div>
-                <div class="pricing-card">
-                    <div class="pricing-starting">
-                    <div class="plan-info">
-                        <div class="plan-tag">Budget Plan</div>
-                        <div class="price">₹2499</div>
-                    </div>
-                    <div class="vertical-separator"></div>
-                    <div class="plan-details">
-                        <h3>4 Updates | Validity 90 days</h3>
-                        <p>You can update your website four times with this plan</p>
-                    </div>
-                </div>
-                    <button class="buy-button">Buy Via Whatsapp</button>
-                </div>
+            </div>
+        </div>
+        
+        <div class="pricing-card">
+            <div class="plan-info">
+                <img src="./images/Blog website.jpg" alt="">
+               </div>
+               <div class="website-info">
+            <div class="plan-details">
+                <h2>Personal Website</h2>
+                <p class="website-desc">For Highlighting A Journey Of Skill And Success</p>
+                <p class="website-content">Up to 6 Pages website | SEO Optimization | 1 Year Free Maintenance <br> Get 4 Free Content Updates within 30 Days after Project Completion</p>
+            </div>
+            <div class="vertical-separator"></div>
+            <div class="website-price">
+                <p class="new-price">
+                    <span class="strikethrough">₹15000</span>
+                </p>                        
+                <h3>₹9999</h3>
+                <button>Book A Free Demo</button>
+            </div>
+        </div>
+    </div>
+                
                        
     </div>
-    <h2 class="section-title">Update with Sections</h2>
-        <p class="subtitle">Add sections to static pages with information in the form of text, along with a photo or any other element.</p>
+    <h2 class="section-title">Website Plans for Small Business</h2>
+        
+    <div class="pricing-card">
+        <div class="plan-info">
+            <img src="./images/Blog website.jpg" alt="">
+           </div>
+           <div class="website-info">
+        <div class="plan-details">
+            <h2>Personal Website</h2>
+            <p class="website-desc">For Highlighting A Journey Of Skill And Success</p>
+            <p class="website-content">Up to 6 Pages website | SEO Optimization | 1 Year Free Maintenance <br> Get 4 Free Content Updates within 30 Days after Project Completion</p>
+        </div>
+        <div class="vertical-separator"></div>
+        <div class="website-price">
+            <p class="new-price">
+                <span class="strikethrough">₹15000</span>
+            </p>                        
+            <h3>₹9999</h3>
+            <button>Book A Free Demo</button>
+        </div>
+    </div>
+</div>
 
-        <div class="pricing-card">
-            <div class="pricing-starting">
-            <div class="plan-info">
-                <div class="plan-tag">Popular Plan</div>
-                <div class="price">₹1399</div>
-            </div>
-            <div class="vertical-separator"></div>
-            <div class="plan-details">
-                <h3>Single Update | Adding up to 2 Sections | Validity 30 days</h3>
-                <p>You can update your website once and also add up to 2 sections</p>
-            </div>
-        </div>
-            <button class="buy-button">Buy Via Whatsapp</button>
-        </div>
-        <div class="pricing-card">
-            <div class="pricing-starting">
-            <div class="plan-info">
-                <div class="plan-tag">Freedom Plan</div>
-                <div class="price">₹2999</div>
-            </div>
-            <div class="vertical-separator"></div>
-            <div class="plan-details">
-                <h3>2 Updates | Adding up to 6 Sections | Validity 30 days</h3>
-                <p>You can update your website twice and also add up to 6 sections</p>
-            </div>
-        </div>
-            <button class="buy-button">Buy Via Whatsapp</button>
-        </div>
-        <div class="pricing-card">
-            <div class="pricing-starting">
-            <div class="plan-info">
-                <div class="plan-tag">Premium Plan</div>
-                <div class="price">₹5899</div>
-            </div>
-            <div class="vertical-separator"></div>
-            <div class="plan-details">
-                <h3>4 Updates | Adding up to 12 Sections | Validity 90 days</h3>
-                <p>You can update your website four times and also add up to 10 sections</p>
-            </div>
-        </div>
-            <button class="buy-button">Buy Via Whatsapp</button>
-        </div>
+        
 
         <h2 class="section-title">Add Section</h2>
 

@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Websites| VA Computers</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<style>
+    body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+ .website-plans {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  padding: 20px;
+  height: 100vh;
+  border-right: 1px solid #ddd;
+}
+
+.menu {
+  list-style: none;
+  /* margin-bottom: 40px; */
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.menu-item.active,
+.menu-item:hover {
+  background-color: #ddd;
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 15px 0;
+}
+
+.sub-menu {
+  margin-top: 20px;
+  /* padding: 10px; */
+}
+
+.sub-menu h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.sub-menu ul {
+  list-style: none;
+}
+
+.sub-menu ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.sub-menu ul li i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f7f7f7;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+/* Tabs */
+div.main-tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.tabs{
+    width: 400px;
+    /* border: 1px solid black; */
+}
+.tabs ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.tabs ul li{
+    position: relative;
+display: inline-block;
+line-height: 24px;
+padding: 0 2px 10px;
+cursor: pointer;
+color: #797f7d;
+font-weight: 500;
+font-size: 18px;
+margin: 0 12px;
+transition: all 300ms ease;
+}
+.tabs ul li.active,
+.tabs ul li:hover{
+    color: black;
+}
+.tabs ul li:before{
+    position: absolute;
+left: 0;
+bottom: 8px;
+height: 2px;
+width: 100%;
+content: "";
+background-color: #c40000;
+transform: scale(0, 1);
+transform-origin: top right;
+transition: transform 500ms cubic-bezier(.86, 0, .07, 1);
+transition-timing-function: cubic-bezier(.86, 0, .07, 1);
+}
+.tabs ul li.active:before,
+.tabs ul li:hover:before{
+    transform: scale(1, 1);
+    transform-origin: bottom left;
+}
+
+.plans{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-section {
+    /* background-color: #fff; */
+    padding: 20px;
+    border-radius: 8px;
+    /* border: 1px solid #ddd; */
+}
+
+.pricing-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.note {
+    text-align: center;
+    color: #c40000;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Sidebar Offer Section */
+.ad-area{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.sidebar-offer {
+    width: 250px;
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+.sidebar-offer h3{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.offer-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    height: 670px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.offer-box img {
+    /* width: 100%;
+    height: 200px; */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.offer-details {
+    text-align: center;
+}
+
+.offer-btn {
+    background-color: #ff3333;
+    border: none;
+    color: white;
+    width: 170px;
+    padding: 5px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+h2.upper-section-title{
+    position: relative;
+            margin-top: 80px;
+            padding-bottom: 10px;
+            font-size: 20px;
+            /* margin-left: -30px; */
+            text-align: left;    
+}
+h2.upper-section-title::after{
+    content: "";
+    position: absolute; 
+    left: 265px; 
+    right: 0; 
+    bottom: 20px; 
+    height: 2px; 
+    background-color: grey; 
+}
+        h2.section-title {
+            position: relative;
+            margin-top: 80px;
+            padding-bottom: 10px;
+            font-size: 20px;
+            /* margin-left: -30px; */
+            text-align: left;
+        }
+        .section-title::after {
+    content: "";
+    position: absolute; 
+    left: 230px; 
+    right: 0; 
+    bottom: 20px; 
+    height: 2px; 
+    background-color: grey; 
+}
+.subtitle {
+            text-align: center;
+            color: #c40000;
+            margin-bottom: 30px;
+            margin-top: -10px;
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+.pricing-card {
+            background: white;
+            border-radius: 4px;
+            height: 160px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            /* align-items: center; */
+            box-shadow:
+        2px 2px 5px 3px rgba(0, 0, 0, 0.05),  /* right-bottom */
+        -2px -2px 5px 3px rgba(0, 0, 0, 0.05), /* left-top */
+        2px -2px 5px 3px rgba(0, 0, 0, 0.05),  /* right-top */
+        -2px 2px 5px 3px rgba(0, 0, 0, 0.05);  /* left-bottom */
+        }
+       
+        .plan-details{
+            width: 500px;
+        }
+       .plan-details h2{
+        text-align: left;
+        font-size: 24px;
+       }
+       
+        .plan-info img{
+            width: 250px;
+            /* height: 200px; */
+        }
+        .website-info{
+            display: flex;
+            justify-content: space-between;
+            /* padding: 15px; */
+            /* align-items: center; */
+        }
+        .website-price{
+            text-align: center;
+        }
+        .plan-details{
+            margin-left: 20px;
+        }
+        .plan-details h2{
+            margin-top: 20px;
+            font-size: 23px;
+        }
+        .website-desc{
+            line-height: 1.2em;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .website-content{
+            line-height: 1.5em;
+            /* font-size: 12px; */
+        }
+        .website-price{
+            margin-right: 20px;
+        }
+        .website-price h3{
+            font-size: 30px;
+            text-align: center;
+        }
+        .website-price button{
+            border: none;
+            border-radius: 8px;
+            width: 165px;
+            background-color: #c40000;
+            color: white;
+            font-weight: bold;
+        }
+        .new-price {
+    color: black; 
+    position: relative; 
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.strikethrough {
+    position: relative;
+}
+
+.strikethrough::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%; 
+    height: 1px; 
+    background-color: #c40000; 
+    z-index: 1; 
+}
+
+        .plan-tag {
+            background: yellow;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            display: inline-block;
+            line-height: normal;
+        }
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .vertical-separator {
+    border-right: 2px solid #a09c9c;
+    /* height: 175px; */
+    margin: 0 10px;
+}
+        .buy-button {
+            background: #FFD700;
+            border: none;
+            padding: 5px;
+            width: 180px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+ ul.notice{
+    margin-top: -5px;
+ }
+        ul.notice li{
+            list-style-type:disc;
+            /* margin-top: -10px; */
+        }
+
+/* -------- Media Queries -------- */
+
+/* Desktop (1920x1080) */
+@media screen and (max-width: 1920px) {
+    .sidebar {
+        width: 338px;
+    }
+    .main-content {
+        padding: 30px;
+        width: 1254px;
+    }
+    
+    .pricing-card {
+        /* width: 900px; */
+        /* height: 80px; */
+        /* padding: 15px; */
+        margin-bottom: 20px;
+    }
+    .sidebar-offer{
+        width: 316px;
+    }
+    .tab{
+        width: 185px;
+        height: 42px;
+        padding: 3px;
+        text-align: center;
+    }
+    .tab:active{
+        background-color: #f7f7f7;
+    }
+}
+
+/* Tablet (768x1024) */
+@media screen and (max-width: 1366px) {
+    .sidebar {
+        width: 250px; /* Keeping the same as it should still fit comfortably */
+    }
+    .main-content {
+        padding: 20px;
+        width: 950px; 
+    }
+    
+    .pricing-card {
+        width: 800px;
+        /* padding: 15px; */
+        margin: 10px 0;
+    }
+    .sidebar-offer{
+        width: 230px; /* Adjusted for the smaller screen */
+    }
+    .tab{
+        width: 150px; /* Reduced the tab width */
+        height: 40px;
+        padding: 2px;
+        text-align: center;
+    }
+    .tab:active{
+        background-color: #f7f7f7;
+    }
+}
+
+
+/* Mobile (360x850) */
+@media screen and (max-width: 850px) {
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+    .main-content {
+        padding: 10px;
+    }
+    .tabs {
+        flex-direction: column;
+    }
+    .tab {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+    }
+    .pricing-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .pricing-card .separator {
+        display: none;
+    }
+    .price {
+        margin-bottom: 10px;
+    }
+    .plan-detail {
+        text-align: center;
+    }
+    .sidebar-offer {
+        width: 100%;
+        padding: 10px;
+    }
+    .offer-box {
+        height: 350px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+<div class="preloader"></div>
+
+<header class="main-header header-style-one">
+    <div class="header-top">
+        <div class="inner-container">
+            <div id="top-left" class="top-left"></div>
+            <div id="top-right" class="top-right"></div>
+        </div>
+    </div>
+
+    <div class="header-lower">
+        <div class="container-fluid">
+            <div class="main-box">
+                <div class="logo-box">
+                    <div class="logo">
+                        <a href="index.html"><img src="./images/logo.png" alt="VA Computers" title="VA Computers"></a>
+                    </div>
+                </div>
+
+                <div class="nav-outer">
+                    <nav class="nav main-menu">
+                        <ul id="navigation" class="navigation"></ul>
+                    </nav>
+                </div>
+                <div class="outer-box">
+                    <a href="tel:+9356393094" class="info-btn">
+                        <i class="icon fa fa-phone"></i>
+                        <small>Call Anytime</small>+91 93563-93094
+                    </a>
+                    <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <nav class="menu-box">
+            <div class="upper-box">
+                <div class="nav-logo">
+                    <a href="../"><img src="./images/logo.png" alt="VA Computers" title=""></a>
+                </div>
+                <div class="close-btn"><i class="icon fa fa-times"></i></div>
+            </div>
+            <ul id="mobile-navigation" class="navigation clearfix"></ul>
+            <ul id="contact-list" class="contact-list-one"></ul>
+            <ul id="social-links" class="social-links"></ul>
+        </nav>
+    </div>
+
+    <div class="sticky-header">
+        <div class="auto-container">
+            <div class="inner-container">
+                <div class="logo">
+                    <a href="index.html"><img src="./images/logo-2.png" alt="VA Computers" title=""></a>
+                </div>
+                <div class="nav-outer">
+                    <nav class="main-menu">
+                        <div class="navbar-collapse show collapse clearfix">
+                            <ul id="sticky-navigation" class="navigation clearfix"></ul>
+                        </div>
+                    </nav>
+                    <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="website-plans">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul class="menu">
+            <a href="../">
+          <li class="menu-item">
+            <i class="fas fa-home"></i> Home
+          </li>
+        </a>
+        <a href="../projects/">
+          <li class="menu-item">
+            <i class="fas fa-tasks"></i> Projects
+          </li>
+        </a>
+        <a href="../websites/">
+          <li class="menu-item active">
+            <i class="fas fa-cogs"></i> Services
+          </li>
+        </a>
+        <a href="../website-plans/">
+          <li class="menu-item">
+            <i class="fas fa-file-invoice-dollar"></i> Pricing Plans
+          </li>
+        </a>
+        </ul>
+    
+        <!-- Thin line after Plans -->
+        <hr class="separator">
+    
+        <div class="sub-menu">
+          <h3>Services</h3>
+          <ul class="menu">
+            <a href="../websites/">
+            <li class="menu-item active">
+                <i class="fas fa-briefcase"></i> Websites 
+            </li>
+        </a>
+        <a href="../web-applications/">
+            <li class="menu-item">
+                <i class="fas fa-sync-alt"></i> Web Applications
+            </li>
+        </a>
+        <a href="../digital-marketing/">
+            <li class="menu-item">
+                <i class="fas fa-check-circle"></i> Digital Marketing
+            </li>
+        </a>
+          </ul>
+        </div>
+    
+        <!-- Thin line after Plans -->
+        <hr class="separator">
+    
+        <div class="sub-menu">
+          <h3>Explore</h3>
+          <ul class="menu">
+            <a href="../website-plans/">
+                <li class="menu-item">
+                    <i class="fas fa-briefcase"></i> Website Plans
+                </li>
+            </a>
+            <a href="../offers-and-discount/">
+            <li class="menu-item">
+                <i class="fas fa-bullhorn"></i> Offers & Discounts
+            </li>
+        </a>
+        <a href="../contact-us/">
+            <li class="menu-item">
+                <i class="fas fa-headset"></i> Contact Us
+            </li>
+        </a>
+          </ul>
+        </div>
+      </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Tabs Section -->
+         
+</div>
+
+<script>
+    document.getElementById('whatsappButton').addEventListener('click', function() {
+        var phoneNumber = '9356393094'; // Add the WhatsApp number
+        var imageUrl = 'first-plan.jpg'; // Replace with your image URL
+        var message = 'Check out this photo: ' + imageUrl;
+
+        var whatsappLink = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
+
+        window.open(whatsappLink, '_blank');
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.tab-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+
+        // Remove active class from all buttons
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+
+        // Add active class to the clicked button
+        this.classList.add('active');
+
+        // Show/Hide plans based on filter
+        document.querySelectorAll('.plan').forEach(plan => {
+            if (plan.getAttribute('data-category') === filter) {
+                plan.style.display = 'block';
+            } else {
+                plan.style.display = 'none';
+            }
+        });
+    });
+});
+
+</script>
+
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+<script data-cfasync="false" src="./email-decode.min.js"></script><script src="js/jquery.js"></script>
+<script src="./js/app.js"></script>
+
+<script src="../javascript.js"></script>
+
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/script.js"></script>
+
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.form.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Website Update Plans | VA Computers</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<style>
+    body{
+        font-family: Verdana;
+    }
+ .website-plans {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  padding: 20px;
+  height: 100vh;
+  border-right: 1px solid #ddd;
+}
+
+.menu {
+  list-style: none;
+  /* margin-bottom: 40px; */
+}
+ul.menu li{
+    margin-bottom: 5px;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+}
+ div.menu{
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+ }
+ div.menu .icons ul li i{
+    font-size: 20px;
+    margin-bottom: 20px;
+ }
+ div.menu .menu-text p{
+    font-size: 18px;
+ }
+ div.menu .icons ul li.active i,
+div.menu .menu-text p.active {
+    color: #FF5733; 
+}
+
+ 
+.menu-item i {
+  margin-right: 20px;
+  font-size: 20px;
+  margin-left: 10px;
+  width: 30px; 
+  text-align: center; 
+}
+
+.menu-item.active,
+.menu-item:hover {
+  background-color: #ddd;
+}
+
+.separator {
+  border: none;
+  border-top: 2px solid #8a8787;
+  margin: 15px 0;
+}
+
+.sub-menu {
+  margin-top: 20px;
+  /* padding: 10px; */
+}
+
+.sub-menu h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.sub-menu ul {
+  list-style: none;
+}
+
+.sub-menu ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.sub-menu ul li i {
+  margin-right: 20px;
+  font-size: 20px;
+  margin-left: 10px;
+  width: 30px; 
+  text-align: center;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    overflow: scroll;
+}
+div.all-plans{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Tabs */
+/* div.main-tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.tabs{
+    width: 400px;
+} */
+/* .tabs ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.tabs ul li,
+.tabs ul li a{
+    position: relative;
+display: inline-block;
+line-height: 24px;
+padding: 0 2px 10px;
+cursor: pointer;
+color: #797f7d;
+font-weight: 500;
+font-size: 18px;
+margin: 0 12px;
+transition: all 300ms ease;
+}
+.tabs ul li.active,
+.tabs ul li:hover{
+    color: black;
+}
+.tabs ul li a.active,
+.tabs ul li a:hover{
+    color: black;
+}
+.tabs ul li:before{
+    position: absolute;
+left: 0;
+bottom: 8px;
+height: 2px;
+width: 100%;
+content: "";
+background-color: #c40000;
+transform: scale(0, 1);
+transform-origin: top right;
+transition: transform 500ms cubic-bezier(.86, 0, .07, 1);
+transition-timing-function: cubic-bezier(.86, 0, .07, 1);
+}
+.tabs ul li a:before{
+    position: absolute;
+left: 0;
+bottom: 8px;
+height: 2px;
+width: 100%;
+content: "";
+background-color: #c40000;
+transform: scale(0, 1);
+transform-origin: top right;
+transition: transform 500ms cubic-bezier(.86, 0, .07, 1);
+transition-timing-function: cubic-bezier(.86, 0, .07, 1);
+}
+.tabs ul li.active:before,
+.tabs ul li:hover:before{
+    transform: scale(1, 1);
+    transform-origin: bottom left;
+} */
+
+.plans{
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; 
+}
+
+.pricing-section {
+    padding: 50px;
+    border-radius: 8px;
+}
+
+.pricing-section h2 {
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    margin-bottom: 5px;
+}
+
+
+
+/* Sidebar Offer Section */
+.ad-area{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.sidebar-offer {
+    width: 250px;
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+.sidebar-offer h3{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.offer-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    height: 670px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.offer-box img {
+    /* width: 100%;
+    height: 200px; */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.offer-details {
+    text-align: center;
+}
+.offer-box .offer-details .offer-heading span{
+    font-weight: bold;
+    font-size: 24px;
+}
+.offer-box .offer-details .offer-subheading{
+    margin-top: -30px;
+}
+.offer-box .offer-details .offer-subheading span{
+    font-weight: bold;
+    font-size: 22px;
+}
+.offer-box .offer-details .offer-valid{
+    color: #c40000;
+}
+.offer-btn {
+    background-color: #ff3333;
+    border: none;
+    color: white;
+    width: 170px;
+    padding: 5px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+button.offer-btn:hover {
+    background-color: transparent;
+    border: 1px solid #ff3333;
+    color: #ff3333;
+    cursor: pointer;
+}
+h2.upper-section-title,
+h2.section-title,
+h2.title{
+    /* position: relative; */
+            margin-top: 40px;
+            padding-bottom: 10px;
+            font-size: 24px;
+            font-family: Roboto, sans-serif;
+            margin-left: -30px;
+            text-align: left;    
+}
+/* h2.upper-section-title::after{
+    content: "";
+    position: absolute; 
+    left: 231px; 
+    right: 0; 
+    bottom: 20px; 
+    height: 1px; 
+    background-color: grey; 
+} */
+       
+/* .section-title::after {
+    content: "";
+    position: absolute; 
+    left: 200px; 
+    right: 0; 
+    bottom: 20px; 
+    height: 1px; 
+    background-color: grey; 
+}
+
+h2.title::after {
+    content: "";
+    position: absolute; 
+    left: 115px; 
+    right: 0; 
+    bottom: 20px; 
+    height: 1px; 
+    background-color: grey; 
+} */
+ .guideline{
+    font-size: 17px;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 22px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+ }
+/* .subtitle {
+            text-align:left;
+            color: black;
+            line-height: 22px;
+            margin-top: -10px;
+            font-size: 17px;
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+        } */
+
+.pricing-card {
+            background: white;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow:
+        2px 2px 5px 3px rgba(0, 0, 0, 0.05),  /* right-bottom */
+        -2px -2px 5px 3px rgba(0, 0, 0, 0.05), /* left-top */
+        2px -2px 5px 3px rgba(0, 0, 0, 0.05),  /* right-top */
+        -2px 2px 5px 3px rgba(0, 0, 0, 0.05);  /* left-bottom */
+        }
+        .pricing-starting{
+            /* width: 500px; */
+            display: flex;
+            justify-content: center;
+        }
+        
+        .plan-info{
+            width: 120px;
+            text-align: center;
+        }
+        .plan-tag,
+        .basic-plan,
+        .budget-plan,
+        .premium-plan,
+        .popular-plan,
+        .add-on {
+            background: yellow;
+            color: black;
+            padding: 2px 8px;
+            /* border-radius: 4px; */
+            font-size: 13px;
+            font-weight: bold;
+            display: inline-block;
+            line-height: normal;
+        }
+        /* .basic-plan{
+            background-color: #3498db;
+            color: #fff;
+        }
+        .budget-plan{
+            background-color:#27ae60;
+            color: #fff;
+        }
+        .premium-plan{
+            background-color: purple;
+        }
+        .popular-plan{
+            background-color: #e74c3c;
+        }
+        .add-on{
+            background-color: rgb(221, 10, 80);
+        } */
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .plan-details h3 {
+            font-size: 18px;
+            margin-top: 10px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .plan-details p {
+            margin: 0;
+            color:#454747;
+            font-size: 14px;
+            line-height: 1.2em;
+        }
+        .vertical-separator {
+    border-left: 2px solid #ddd;
+    height: 60px;
+    margin: 0 10px;
+}
+        .buy-button {
+            background:#FFD700;
+            color: black;
+            border: none;
+            padding: 5px;
+            width: 180px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button.buy-button:hover {
+            background: transparent;
+            border: 1px solid #FFD700;
+            color: black;
+            cursor: pointer;
+        }
+        
+ ul.notice{
+    margin-top: -5px;
+ }
+        ul.notice li{
+            list-style-type:disc;
+            color: rgb(83, 82, 82);
+            line-height: 22px;
+            font-family: Arial, sans-serif;
+            /* margin-top: -10px; */
+        }
+
+/* -------- Media Queries -------- */
+
+/* Desktop (1920x1080) */
+@media screen and (max-width: 1920px) {
+    .sidebar {
+        width: 338px;
+    }
+    .main-content {
+        padding: 30px;
+        width: 1254px;
+    }
+    
+    .subtitle{
+        font-size: 16px;
+    }
+    .plan-tag{
+        font-weight: bold;
+        font-size: 13px;
+    }
+    .pricing-starting{
+        align-items: center;
+    }
+    .pricing-card {
+       width: 950px;
+        height: 90px;
+        padding: 15px;
+        /* margin: 15px 0; */
+        margin-bottom: 25px;
+    }
+    .vertical-separator{
+        height: 90px;
+    }
+    .sidebar-offer{
+        width: 316px;
+    }
+    .offer-box h3{
+        font-size: 24px;
+    }
+    .offer-box{
+        height: 700px;
+    }
+    .tab{
+        width: 185px;
+        height: 42px;
+        padding: 3px;
+        text-align: center;
+    }
+    .tab:active{
+        background-color: #f7f7f7;
+    }
+    
+}
+
+@media screen and (max-width: 1366px) {
+    .sidebar {
+        width: 250px;
+    }
+    .subtitle{
+        font-size: 15px;
+        line-height: 1.3em;
+    }
+    .main-content {
+        padding: 20px;
+        width: 950px; 
+
+    }
+    .pricing-starting{
+        align-items: center;
+    }
+    .pricing-card {
+        width: 800px;
+        height: 100px;
+        padding: 15px;
+        margin: 10px 0;
+        margin-bottom: 20px;
+    }
+    .vertical-separator{
+        height: 100px;
+    }
+    h2.upper-section-title,
+    h2.section-title,
+    h2.title{
+        font-size: 17px;
+    }
+    .plan-tag{
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .sidebar-offer{
+        width: 230px; 
+    }
+    .offer-box h3{
+        font-size: 17px;
+    }
+    .offer-box{
+        height: 570px;
+    }
+    .offer-box .offer-details .offer-heading span{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .offer-box .offer-details .offer-heading{
+        font-size: 12px;
+    }
+    .offer-box .offer-details .offer-subheading{
+        font-size: 12px;
+    }
+    .offer-box .offer-details .offer-subheading span{
+        font-size: 16px;
+    }
+    .offer-box .offer-details .offer-valid{
+        font-size: 11px;
+    }
+
+    .offer-box .offer-btn{
+        width: 150px;
+    }
+    .tab{
+        width: 150px; 
+        height: 40px;
+        padding: 2px;
+        text-align: center;
+    }
+    .tab:active{
+        background-color: #f7f7f7;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .sidebar {
+        width: 220px; 
+    }
+    .sidebar .menu li{
+        font-size: 14px;
+    }
+    .main-content {
+        padding: 15px;
+        width: 860px; 
+    }
+    .pricing-section h2{
+        font-size: 28px;
+    }
+    h2.upper-section-title{
+        font-size: 20px;
+    }
+    h2.section-title{
+        font-size: 20px;
+    }
+    h2.title{
+        font-size: 20px;
+    }
+    .pricing-starting{
+        align-items: center;
+    }
+    .pricing-card {
+        width: 750px; 
+        height: 105px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .plan-details h3{
+        font-size: 17px;
+        font-weight: 600;
+    }
+    h2.upper-section-title,
+    h2.section-title,
+    h2.title{
+        font-size: 16px;
+    }
+   
+    .sidebar-offer {
+        width: 200px; 
+    }
+    .vertical-separator{
+        height: 105px;
+    }
+    .offer-box h3{
+        font-size: 16px;
+        font-weight: 300;
+    }
+    .offer-box{
+        height: 530px;
+        width: 170px;
+    }
+    .plan-tag{
+        font-size: 11px;
+        font-weight: bold;
+    }
+    .offer-box .offer-btn{
+        font-size: 12px;
+        width: 100px;
+    }
+    .offer-box .offer-details .offer-heading span{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .offer-box .offer-details .offer-heading{
+        font-size: 10px;
+    }
+    .offer-box .offer-details .offer-subheading{
+        font-size: 10px;
+        margin-top: -35px;
+    }
+    .offer-box .offer-details .offer-subheading span{
+        font-size: 15px;
+        margin-top: -15px;
+    }
+    .offer-box .offer-details .offer-valid{
+        font-size: 8px;
+    }
+    .subtitle{
+        font-size: 14px;
+        line-height: 1.3em;
+    }
+    .tab {
+        width: 130px; 
+        height: 35px;
+        padding: 2px;
+        text-align: center;
+    }
+
+    .tab:active {
+        background-color: #f7f7f7;
+    }
+}
+
+
+/* Mobile (360x850) */
+@media screen and (max-width: 850px) {
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+    .main-content {
+        padding: 10px;
+    }
+    .tabs {
+        flex-direction: column;
+    }
+    .tab {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+    }
+    .pricing-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .pricing-card .separator {
+        display: none;
+    }
+    .price {
+        margin-bottom: 10px;
+    }
+    .plan-detail {
+        text-align: center;
+    }
+    .sidebar-offer {
+        width: 100%;
+        padding: 10px;
+    }
+    .offer-box {
+        height: 350px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+<div class="preloader"></div>
+
+<header class="main-header header-style-one">
+    <div class="header-top">
+        <div class="inner-container">
+            <div id="top-left" class="top-left"></div>
+            <div id="top-right" class="top-right"></div>
+        </div>
+    </div>
+
+    <div class="header-lower">
+        <div class="container-fluid">
+            <div class="main-box">
+                <div class="logo-box">
+                    <div class="logo">
+                        <a href="index.html"><img src="./images/logo.png" alt="VA Computers" title="VA Computers"></a>
+                    </div>
+                </div>
+
+                <div class="nav-outer">
+                    <nav class="nav main-menu">
+                        <ul id="navigation" class="navigation"></ul>
+                    </nav>
+                </div>
+                <div class="outer-box">
+                    <a href="tel:+9356393094" class="info-btn">
+                        <i class="icon fa fa-phone"></i>
+                        <small>Call Anytime</small>+91 93563-93094
+                    </a>
+                    <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <nav class="menu-box">
+            <div class="upper-box">
+                <div class="nav-logo">
+                    <a href="../"><img src="./images/logo.png" alt="VA Computers" title=""></a>
+                </div>
+                <div class="close-btn"><i class="icon fa fa-times"></i></div>
+            </div>
+            <ul id="mobile-navigation" class="navigation clearfix"></ul>
+            <ul id="contact-list" class="contact-list-one"></ul>
+            <ul id="social-links" class="social-links"></ul>
+        </nav>
+    </div>
+
+    <div class="sticky-header">
+        <div class="auto-container">
+            <div class="inner-container">
+                <div class="logo">
+                    <a href="index.html"><img src="./images/logo-2.png" alt="VA Computers" title=""></a>
+                </div>
+                <div class="nav-outer">
+                    <nav class="main-menu">
+                        <div class="navbar-collapse show collapse clearfix">
+                            <ul id="sticky-navigation" class="navigation clearfix"></ul>
+                        </div>
+                    </nav>
+                    <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="website-plans">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul class="menu">
+            <a href="../">
+          <li class="menu-item">
+            <i class="fas fa-home"></i> Home
+          </li>
+        </a>
+        <a href="../projects/">
+          <li class="menu-item">
+            <i class="fas fa-tasks"></i> Projects
+          </li>
+        </a>
+        <a href="../websites/">
+          <li class="menu-item">
+            <i class="fas fa-cogs"></i> Services
+          </li>
+        </a>
+        <a href="./">
+          <li class="menu-item active">
+            <i class="fas fa-file-invoice-dollar"></i> Pricing Plans
+          </li>
+        </a>
+        </ul>
+    
+        <!-- Thin line after Plans -->
+        <hr class="separator">
+    
+        <div class="sub-menu">
+          <h3>Pricing Plans</h3>
+          <ul class="menu">
+            <a href="../website-plans/">
+            <li class="menu-item">
+                <i class="fas fa-briefcase"></i> Website Plans
+            </li>
+        </a>
+        <a href="./">
+            <li class="menu-item active">
+                <i class="fas fa-sync-alt"></i> Website Update
+            </li>
+        </a>
+        <a href="../digital-marketing-plan/">
+            <li class="menu-item">
+                <i class="fas fa-sync-alt"></i> Digital Marketing
+            </li>
+        </a>
+          </ul>
+        </div>
+    
+        <!-- Thin line after Plans -->
+        <hr class="separator">
+    
+        <div class="sub-menu">
+          <h3>Explore</h3>
+          <ul class="menu">
+            <a href="../offers-and-discount/">
+            <li class="menu-item">
+                <i class="fas fa-bullhorn"></i> Offers & Discounts
+            </li>
+        </a>
+        <a href="../contact-us/">
+            <li class="menu-item">
+                <i class="fas fa-headset"></i> Contact Us
+            </li>
+        </a>
+          </ul>
+        </div>
+      </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Tabs Section -->
+         <!-- <div class="main-tab">
+        <div class="tabs">
+            <ul>
+                <li class="tab-btn active" data-filter="website-update">Website Update</li>
+                <li class="tab-btn" data-filter="adding-pages"><a href="#add-pages">Adding Pages</a></li>
+                <li class="tab-btn" data-filter="adding-features">Adding Features</li>
+            </ul>
+        </div>
+    </div> -->
+
+     <!-- <input id="tab1" type="radio" name="tabs" checked>
+    <label for="tab1" class="active">Content Update</label>
+    <input id="tab2" type="radio" name="tabs">
+    <label for="tab2">Sections Update</label>
+    <input id="tab3" type="radio" name="tabs">
+    <label for="tab3">New Pages</label>
+    <input id="tab4" type="radio" name="tabs">
+    <label for="tab4">Dynamic Features</label> -->
+            <!-- <button class="tab active"></button>
+            <button class="tab"></button>
+            <button class="tab"></button>
+            <button class="tab"></button>
+            <button class="tab">Dynamic Pages</button>
+            <button class="tab">SEO Optimization</button> -->
+        <!-- Pricing Plans Section -->
+
+        
+        <div class="plans">
+        <div class="pricing-section">
+            <h2>Website Content Update Plans</h2>
+           
+            <h2 class="upper-section-title">Content Update</h2>
+            
+            <div class="all-plans">
+            <div class="main-pricing">
+                <div class="pricing-card">
+                    <div class="pricing-starting">
+                    <div class="plan-info">
+                        <div class="plan-tag">Starter Plan</div>
+                        <div class="price">₹999</div>
+                    </div>
+                    <div class="vertical-separator"></div>
+                    <div class="plan-details">
+                        <h3>Single Update | Validity 30 days</h3>
+                        <p>You can update your website only once within 30 Days</p>
+                    </div>
+                </div>
+                    <button id="whatsappButton" class="buy-button">Buy Via Whatsapp</button>
+                </div>
+    
+                <div class="pricing-card">
+                    <div class="pricing-starting">
+                    <div class="plan-info">
+                        <div class="basic-plan">Basic Plan</div>
+                        <div class="price">₹1599</div>
+                    </div>
+                    <div class="vertical-separator"></div>
+                    <div class="plan-details">
+                        <h3>2 Updates | Validity 60 days</h3>
+                        <p>You can update your website twice within 60 Days</p>
+                    </div>
+                </div>
+                    <button class="buy-button">Buy Via Whatsapp</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-starting">
+                    <div class="plan-info">
+                        <div class="budget-plan">Budget Plan</div>
+                        <div class="price">₹2499</div>
+                    </div>
+                    <div class="vertical-separator"></div>
+                    <div class="plan-details">
+                        <h3>4 Updates | Validity 90 days</h3>
+                        <p>You can update your website four times with this plan</p>
+                    </div>
+                </div>
+                    <button class="buy-button">Buy Via Whatsapp</button>
+                </div>
+                <h3 class="guideline">Only existing information can be edited, pictures can be changed, and data can be added to semi-dynamic pages.</h3>
+                <!-- <p class="subtitle">Add sections to static pages with information in the form of text, along with a photo or any other element.</p> -->
+                <!-- <hr> -->
+                      
+    <h2 class="section-title">Update with Sections</h2>
+        <!-- <p class="subtitle">Add sections to static pages with information in the form of text, along with a photo or any other element.</p> -->
+
+        <div class="pricing-card">
+            <div class="pricing-starting">
+            <div class="plan-info">
+                <div class="plan-tag">Popular Plan</div>
+                <div class="price">₹1399</div>
+            </div>
+            <div class="vertical-separator"></div>
+            <div class="plan-details">
+                <h3>Single Update | Adding up to 2 Sections | Validity 30 days</h3>
+                <p>You can update your website once and also add up to 2 sections</p>
+            </div>
+        </div>
+            <button class="buy-button">Buy Via Whatsapp</button>
+        </div>
+        <div class="pricing-card">
+            <div class="pricing-starting">
+            <div class="plan-info">
+                <div class="basic-plan">Freedom Plan</div>
+                <div class="price">₹2999</div>
+            </div>
+            <div class="vertical-separator"></div>
+            <div class="plan-details">
+                <h3>2 Updates | Adding up to 6 Sections | Validity 30 days</h3>
+                <p>You can update your website twice and also add up to 6 sections</p>
+            </div>
+        </div>
+            <button class="buy-button">Buy Via Whatsapp</button>
+        </div>
+        <div class="pricing-card">
+            <div class="pricing-starting">
+            <div class="plan-info">
+                <div class="premium-plan">Premium Plan</div>
+                <div class="price">₹5899</div>
+            </div>
+            <div class="vertical-separator"></div>
+            <div class="plan-details">
+                <h3>4 Updates | Adding up to 12 Sections | Validity 90 days</h3>
+                <p>You can update your website four times and also add up to 10 sections</p>
+            </div>
+        </div>
+            <button class="buy-button">Buy Via Whatsapp</button>
+        </div>
+
+        <h2 class="title">Add Section</h2>
+
+        <div class="pricing-card">
+            <div class="pricing-starting">
+            <div class="plan-info">
+                <div class="popular-plan">Popular Plan</div>
+                <div class="price">₹299</div>
+            </div>
+            <div class="vertical-separator"></div>
+            <div class="plan-details">
+                <h3>Add a single section </h3>
+                <p>You can add a section to your website, but an active update plan is required for this</p>
+            </div>
+        </div>
+            <button class="buy-button">Buy Via Whatsapp</button>
+        </div>
+        <h3 class="guideline">Add sections to static pages with information in the form of text, along with a photo or any other element.</h3>
+
+        <h2 class="title" id="add-pages">Add Pages</h2>
+        <!-- <p class="subtitle">Please note that a Each page will contain a single type of information and will not be multi-purpose.</p> -->
+
+        <div class="pricing-card">
+            <div class="pricing-starting">
+            <div class="plan-info">
+                <div class="add-on">Add-On</div>
+                <div class="price">₹1499</div>
+            </div>
+            <div class="vertical-separator"></div>
+            <div class="plan-details">
+                <h3>Single Static Page | Validity 7 days </h3>
+                <p>You can add a static page to your website within 7 days.</p>
+            </div>
+        </div>
+            <button class="buy-button">Buy Via Whatsapp</button>
+        </div>
+        <div class="pricing-card">
+            <div class="pricing-starting">
+            <div class="plan-info">
+                <div class="add-on">Add-On</div>
+                <div class="price">₹2899</div>
+            </div>
+            <div class="vertical-separator"></div>
+            <div class="plan-details">
+                <h3>2 Static Pages | Validity 10 days </h3>
+                <p>You can add 2 static pages to your website within 7 days.</p>
+            </div>
+        </div>
+            <button class="buy-button">Buy Via Whatsapp</button>
+        </div>
+        <div class="pricing-card">
+            <div class="pricing-starting">
+            <div class="plan-info">
+                <div class="add-on">Add-On</div>
+                <div class="price">₹7299</div>
+            </div>
+            <div class="vertical-separator"></div>
+            <div class="plan-details">
+                <h3>5 Static Pages | Validity 30 days </h3>
+                <p>You can add 5 static pages to your website within 30 days.</p>
+            </div>
+        </div>
+            <button class="buy-button">Buy Via Whatsapp</button>
+        </div>
+<h3 class="guideline">Please note that a Each page will contain a single type of information and will not be multi-purpose.</h3>
+
+        <h2 class="section-title">Semi Dynamic Pages</h2>
+
+        <div class="pricing-card">
+            <div class="pricing-starting">
+            <div class="plan-info">
+                <div class="add-on">Add-On</div>
+                <div class="price">₹2499</div>
+            </div>
+            <div class="vertical-separator"></div>
+            <div class="plan-details">
+                <h3>Add Semi Dynamic Gallery with Side Pane </h3>
+                <p>You can create a gallery where you can divide different photos into separate classes.</p>
+            </div>
+        </div>
+            <button class="buy-button">Buy Via Whatsapp</button>
+        </div>
+    </div>
+</div>
+
+        <h3 style="color: black;font-size: 22px;margin-top: 90px;font-family: Arial, sans-serif;">Important Notice:</h3>
+        <ul class="notice">
+            <li>
+                Website updates will require all information to be provided in writing. If any mistakes are found, corrections will only be made in the next update.
+            </li>
+            <li>
+                Users are humbly requested to provide content within the plan's validity period. If users fail to provide data before it expires, we cannot accommodate their requests.
+            </li>
+        </ul>
+    </div>
+    </div>
+    </div>
+
+    <!-- Sidebar Offer Section -->
+     <div class="ad-area">
+    <div class="sidebar-offer">
+        <div class="offer-box">
+        <h3>Celebration Offer</h3>
+
+            <img src="./images/offer.png" alt="Offer Image">
+            <div class="offer-details">
+                <p class="offer-heading"><span>Dussehra Offer</span> <br> Buy any update plan  and </p>
+                <p class="offer-subheading">Get 1 section update <br>
+                    <span>Worth <sup>₹</sup>299</span> </p>
+                <p class="offer-valid">Offer Valid Till 13 Oct 2024</p>
+                <a href="../offers/"><button class="offer-btn">Get Offer</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script>
+    document.getElementById('whatsappButton').addEventListener('click', function() {
+        var phoneNumber = '9356393094'; // Add the WhatsApp number
+        var imageUrl = 'first-plan.jpg'; // Replace with your image URL
+        var message = 'Check out this photo: ' + imageUrl;
+
+        var whatsappLink = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
+
+        window.open(whatsappLink, '_blank');
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.tab-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+
+        // Remove active class from all buttons
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+
+        // Add active class to the clicked button
+        this.classList.add('active');
+
+        // Show/Hide plans based on filter
+        document.querySelectorAll('.plan').forEach(plan => {
+            if (plan.getAttribute('data-category') === filter) {
+                plan.style.display = 'block';
+            } else {
+                plan.style.display = 'none';
+            }
+        });
+    });
+});
+
+</script>
+
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+<script data-cfasync="false" src="./email-decode.min.js"></script><script src="js/jquery.js"></script>
+<script src="./js/app.js"></script>
+
+<script src="../javascript.js"></script>
+
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/script.js"></script>
+
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.form.min.js"></script>
+
+</body>
+</html>
