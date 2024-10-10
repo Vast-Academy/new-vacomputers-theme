@@ -4,7 +4,7 @@ const navbarItems = `
     <li><a href="../projects/">Projects</a></li>
     <li class="dropdown"><a href="">Services</a>
         <ul>
-            <li><a href="../websites/">Websites</a></li>
+            <li><a href="../websites/">Website Development</a></li>
             <li><a href="../web-applications/">Web Applications</a></li>
             <li><a href="../digital-marketing/">Digital Marketing</a></li>
         </ul>
@@ -12,8 +12,8 @@ const navbarItems = `
     <li class="dropdown"><a href="">Pricing</a>
      <ul>
             <li><a href="../website-plans">Website Plans</a></li>
-            <li><a href="../update-plans/">Update Plans</a></li>
-            <li><a href="../digital-marketing-plan">Digital Marketing</a></li>
+            <li><a href="../update-plans/">Website Update Plans</a></li>
+            <li><a href="../digital-marketing-plan">Digital Marketing Plans</a></li>
         </ul>
     </li>
     <li><a href="../about-us/">About</a></li>

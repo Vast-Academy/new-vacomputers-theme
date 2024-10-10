@@ -76,7 +76,7 @@ section.main {
     font-weight: bold;
     color: #000;
     padding: 10px;
-    margin-left: -60px;
+    margin-left: -30px;
     border-radius: 30px;
     position: relative;
     z-index: 1;
@@ -112,7 +112,7 @@ div.component {
     margin-top: -60px;
     margin-bottom: 70px;
     width: 500px;
-    height: 710px;
+    height: 690px;
     border-radius: 10px;
     zoom: 0.9;
     box-shadow:
@@ -337,7 +337,7 @@ div.component div.lower .right-work .msg p {
 
 div.component div.lower .right-work .update {
     text-align: center;
-    font-size: 11px;
+    font-size: 10px;
     color: black;
     /* margin-left: 30px; */
     font-weight: normal;

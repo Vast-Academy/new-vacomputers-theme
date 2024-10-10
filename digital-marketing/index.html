@@ -5,7 +5,7 @@
 <title>Digital Marketing | VA Computers</title>
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
 <link href="css/responsive.css" rel="stylesheet">
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 <link rel="icon" href="images/favicon.png" type="image/x-icon">
@@ -13,8 +13,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <style>
-    body{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+       body{
+        font-family: Verdana;
     }
  .website-plans {
     display: flex;
@@ -34,20 +34,42 @@
   list-style: none;
   /* margin-bottom: 40px; */
 }
-
+ul.menu li{
+    margin-bottom: 5px;
+}
 .menu-item {
   display: flex;
   align-items: center;
   font-size: 18px;
   padding: 10px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 15px;
   transition: background-color 0.3s ease;
 }
+ div.menu{
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+ }
+ div.menu .icons ul li i{
+    font-size: 20px;
+    margin-bottom: 20px;
+ }
+ div.menu .menu-text p{
+    font-size: 18px;
+ }
+ div.menu .icons ul li.active i,
+div.menu .menu-text p.active {
+    color: #FF5733; 
+}
 
+ 
 .menu-item i {
-  margin-right: 10px;
+  margin-right: 20px;
   font-size: 20px;
+  margin-left: 10px;
+  width: 30px; 
+  text-align: center; 
 }
 
 .menu-item.active,
@@ -57,7 +79,7 @@
 
 .separator {
   border: none;
-  border-top: 1px solid #ddd;
+  border-top: 2px solid #8a8787;
   margin: 15px 0;
 }
 
@@ -79,25 +101,32 @@
   display: flex;
   align-items: center;
   padding: 10px;
+  margin-bottom: 5px;
   font-size: 18px;
 }
 
 .sub-menu ul li i {
-  margin-right: 10px;
-  font-size: 18px;
+  margin-right: 20px;
+  font-size: 20px;
+  margin-left: 10px;
+  width: 30px; 
+  text-align: center;
 }
 
 /* Main Content */
 .main-content {
     flex-grow: 1;
     padding: 20px;
-    background-color: #f7f7f7;
+    background-color: #ffffff;
     overflow: scroll;
-    scroll-behavior: smooth;
 }
-
+div.all-plans{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* Tabs */
-div.main-tab{
+/* div.main-tab{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,15 +134,15 @@ div.main-tab{
 }
 .tabs{
     width: 400px;
-    /* border: 1px solid black; */
-}
-.tabs ul{
+} */
+/* .tabs ul{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.tabs ul li{
+.tabs ul li,
+.tabs ul li a{
     position: relative;
 display: inline-block;
 line-height: 24px;
@@ -129,7 +158,24 @@ transition: all 300ms ease;
 .tabs ul li:hover{
     color: black;
 }
+.tabs ul li a.active,
+.tabs ul li a:hover{
+    color: black;
+}
 .tabs ul li:before{
+    position: absolute;
+left: 0;
+bottom: 8px;
+height: 2px;
+width: 100%;
+content: "";
+background-color: #c40000;
+transform: scale(0, 1);
+transform-origin: top right;
+transition: transform 500ms cubic-bezier(.86, 0, .07, 1);
+transition-timing-function: cubic-bezier(.86, 0, .07, 1);
+}
+.tabs ul li a:before{
     position: absolute;
 left: 0;
 bottom: 8px;
@@ -146,33 +192,31 @@ transition-timing-function: cubic-bezier(.86, 0, .07, 1);
 .tabs ul li:hover:before{
     transform: scale(1, 1);
     transform-origin: bottom left;
-}
+} */
 
 .plans{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; 
 }
 
 .pricing-section {
-    /* background-color: #fff; */
-    padding: 20px;
+    padding: 50px;
     border-radius: 8px;
-    /* border: 1px solid #ddd; */
 }
 
 .pricing-section h2 {
     text-align: center;
-    font-size: 32px;
+    font-family: Roboto, sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
     margin-bottom: 5px;
 }
 
-.note {
-    text-align: center;
-    color: #c40000;
-    font-size: 18px;
-    margin-bottom: 30px;
-}
+
 
 /* Sidebar Offer Section */
 .ad-area{
@@ -212,7 +256,20 @@ transition-timing-function: cubic-bezier(.86, 0, .07, 1);
 .offer-details {
     text-align: center;
 }
-
+.offer-box .offer-details .offer-heading span{
+    font-weight: bold;
+    font-size: 24px;
+}
+.offer-box .offer-details .offer-subheading{
+    margin-top: -30px;
+}
+.offer-box .offer-details .offer-subheading span{
+    font-weight: bold;
+    font-size: 22px;
+}
+.offer-box .offer-details .offer-valid{
+    color: #c40000;
+}
 .offer-btn {
     background-color: #ff3333;
     border: none;
@@ -222,159 +279,151 @@ transition-timing-function: cubic-bezier(.86, 0, .07, 1);
     border-radius: 40px;
     cursor: pointer;
 }
-h2.upper-section-title{
-    position: relative;
-            margin-top: 80px;
+button.offer-btn:hover {
+    background-color: transparent;
+    border: 1px solid #ff3333;
+    color: #ff3333;
+    cursor: pointer;
+}
+h2.upper-section-title,
+h2.section-title,
+h2.title{
+    /* position: relative; */
+            margin-top: 40px;
             padding-bottom: 10px;
-            font-size: 20px;
-            /* margin-left: -30px; */
+            font-size: 24px;
+            font-family: Roboto, sans-serif;
+            margin-left: -30px;
             text-align: left;    
 }
-h2.upper-section-title::after{
+/* h2.upper-section-title::after{
     content: "";
     position: absolute; 
-    left: 265px; 
+    left: 231px; 
     right: 0; 
     bottom: 20px; 
-    height: 2px; 
+    height: 1px; 
     background-color: grey; 
-}
-        h2.section-title {
-            position: relative;
-            margin-top: 80px;
-            padding-bottom: 10px;
-            font-size: 20px;
-            /* margin-left: -30px; */
-            text-align: left;
-        }
-        .section-title::after {
+} */
+       
+/* .section-title::after {
     content: "";
     position: absolute; 
-    left: 230px; 
+    left: 200px; 
     right: 0; 
     bottom: 20px; 
-    height: 2px; 
+    height: 1px; 
     background-color: grey; 
 }
-.subtitle {
-            text-align: center;
-            color: #c40000;
-            margin-bottom: 30px;
+
+h2.title::after {
+    content: "";
+    position: absolute; 
+    left: 115px; 
+    right: 0; 
+    bottom: 20px; 
+    height: 1px; 
+    background-color: grey; 
+} */
+ .guideline{
+    font-size: 17px;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 22px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+ }
+/* .subtitle {
+            text-align:left;
+            color: black;
+            line-height: 22px;
             margin-top: -10px;
-            font-size: 20px;
+            font-size: 17px;
+            font-family: Arial, sans-serif;
             font-weight: normal;
-        }
+        } */
 
 .pricing-card {
             background: white;
             border-radius: 4px;
-            height: 160px;
-            margin-bottom: 30px;
+            padding: 15px;
+            margin-bottom: 20px;
             display: flex;
             justify-content: space-between;
-            /* align-items: center; */
+            align-items: center;
             box-shadow:
         2px 2px 5px 3px rgba(0, 0, 0, 0.05),  /* right-bottom */
         -2px -2px 5px 3px rgba(0, 0, 0, 0.05), /* left-top */
         2px -2px 5px 3px rgba(0, 0, 0, 0.05),  /* right-top */
         -2px 2px 5px 3px rgba(0, 0, 0, 0.05);  /* left-bottom */
         }
-       
-        .plan-details{
-            width: 500px;
-        }
-       .plan-details h2{
-        text-align: left;
-        font-size: 24px;
-       }
-       
-        .plan-info img{
-            width: 250px;
-            /* height: 200px; */
-        }
-        .website-info{
+        .pricing-starting{
+            /* width: 500px; */
             display: flex;
-            justify-content: space-between;
-            /* padding: 15px; */
-            /* align-items: center; */
+            justify-content: center;
         }
-        .website-price{
+        
+        .plan-info{
+            width: 120px;
             text-align: center;
         }
-        .plan-details{
-            margin-left: 20px;
-        }
-        .plan-details h2{
-            margin-top: 20px;
-            font-size: 23px;
-        }
-        .website-desc{
-            line-height: 1.2em;
-            font-size: 16px;
-            margin-bottom: 30px;
-        }
-        .website-content{
-            line-height: 1.5em;
-            /* font-size: 12px; */
-        }
-        .website-price{
-            margin-right: 20px;
-        }
-        .website-price h3{
-            font-size: 30px;
-            text-align: center;
-        }
-        .website-price button{
-            border: none;
-            border-radius: 8px;
-            width: 165px;
-            background-color: #c40000;
-            color: white;
-            font-weight: bold;
-        }
-        .new-price {
-    color: black; 
-    position: relative; 
-    font-size: 18px;
-    margin-top: 30px;
-    margin-bottom: 0;
-}
-
-.strikethrough {
-    position: relative;
-}
-
-.strikethrough::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%; 
-    height: 1px; 
-    background-color: #c40000; 
-    z-index: 1; 
-}
-
-        .plan-tag {
+        .plan-tag,
+        .basic-plan,
+        .budget-plan,
+        .premium-plan,
+        .popular-plan,
+        .add-on {
             background: yellow;
+            color: black;
             padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 14px;
+            /* border-radius: 4px; */
+            font-size: 13px;
+            font-weight: bold;
             display: inline-block;
             line-height: normal;
         }
+        /* .basic-plan{
+            background-color: #3498db;
+            color: #fff;
+        }
+        .budget-plan{
+            background-color:#27ae60;
+            color: #fff;
+        }
+        .premium-plan{
+            background-color: purple;
+        }
+        .popular-plan{
+            background-color: #e74c3c;
+        }
+        .add-on{
+            background-color: rgb(221, 10, 80);
+        } */
         .price {
             font-size: 24px;
             font-weight: bold;
         }
-        
+        .plan-details h3 {
+            font-size: 18px;
+            margin-top: 10px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .plan-details p {
+            margin: 0;
+            color:#454747;
+            font-size: 14px;
+            line-height: 1.2em;
+        }
         .vertical-separator {
-    border-right: 2px solid #a09c9c;
-    /* height: 175px; */
+    border-left: 2px solid #ddd;
+    height: 60px;
     margin: 0 10px;
 }
         .buy-button {
-            background: #FFD700;
+            background:#FFD700;
+            color: black;
             border: none;
             padding: 5px;
             width: 180px;
@@ -382,11 +431,22 @@ h2.upper-section-title::after{
             cursor: pointer;
             font-weight: bold;
         }
+
+        button.buy-button:hover {
+            background: transparent;
+            border: 1px solid #FFD700;
+            color: black;
+            cursor: pointer;
+        }
+        
  ul.notice{
     margin-top: -5px;
  }
         ul.notice li{
             list-style-type:disc;
+            color: rgb(83, 82, 82);
+            line-height: 22px;
+            font-family: Arial, sans-serif;
             /* margin-top: -10px; */
         }
 
@@ -402,14 +462,34 @@ h2.upper-section-title::after{
         width: 1254px;
     }
     
+    .subtitle{
+        font-size: 16px;
+    }
+    .plan-tag{
+        font-weight: bold;
+        font-size: 13px;
+    }
+    .pricing-starting{
+        align-items: center;
+    }
     .pricing-card {
-        /* width: 900px; */
-        /* height: 80px; */
-        /* padding: 15px; */
-        margin-bottom: 20px;
+       width: 950px;
+        height: 90px;
+        padding: 15px;
+        /* margin: 15px 0; */
+        margin-bottom: 25px;
+    }
+    .vertical-separator{
+        height: 90px;
     }
     .sidebar-offer{
         width: 316px;
+    }
+    .offer-box h3{
+        font-size: 24px;
+    }
+    .offer-box{
+        height: 700px;
     }
     .tab{
         width: 185px;
@@ -420,33 +500,178 @@ h2.upper-section-title::after{
     .tab:active{
         background-color: #f7f7f7;
     }
+    
 }
 
-/* Tablet (768x1024) */
 @media screen and (max-width: 1366px) {
     .sidebar {
-        width: 250px; /* Keeping the same as it should still fit comfortably */
+        width: 250px;
+    }
+    .subtitle{
+        font-size: 15px;
+        line-height: 1.3em;
     }
     .main-content {
         padding: 20px;
         width: 950px; 
+
     }
-    
+    .pricing-starting{
+        align-items: center;
+    }
     .pricing-card {
         width: 800px;
-        /* padding: 15px; */
+        height: 100px;
+        padding: 15px;
         margin: 10px 0;
+        margin-bottom: 20px;
+    }
+    .vertical-separator{
+        height: 100px;
+    }
+    h2.upper-section-title,
+    h2.section-title,
+    h2.title{
+        font-size: 17px;
+    }
+    .plan-tag{
+        font-size: 12px;
+        font-weight: bold;
     }
     .sidebar-offer{
-        width: 230px; /* Adjusted for the smaller screen */
+        width: 230px; 
+    }
+    .offer-box h3{
+        font-size: 17px;
+    }
+    .offer-box{
+        height: 570px;
+    }
+    .offer-box .offer-details .offer-heading span{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .offer-box .offer-details .offer-heading{
+        font-size: 12px;
+    }
+    .offer-box .offer-details .offer-subheading{
+        font-size: 12px;
+    }
+    .offer-box .offer-details .offer-subheading span{
+        font-size: 16px;
+    }
+    .offer-box .offer-details .offer-valid{
+        font-size: 11px;
+    }
+
+    .offer-box .offer-btn{
+        width: 150px;
     }
     .tab{
-        width: 150px; /* Reduced the tab width */
+        width: 150px; 
         height: 40px;
         padding: 2px;
         text-align: center;
     }
     .tab:active{
+        background-color: #f7f7f7;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .sidebar {
+        width: 220px; 
+    }
+    .sidebar .menu li{
+        font-size: 14px;
+    }
+    .main-content {
+        padding: 15px;
+        width: 860px; 
+    }
+    .pricing-section h2{
+        font-size: 28px;
+    }
+    h2.upper-section-title{
+        font-size: 20px;
+    }
+    h2.section-title{
+        font-size: 20px;
+    }
+    h2.title{
+        font-size: 20px;
+    }
+    .pricing-starting{
+        align-items: center;
+    }
+    .pricing-card {
+        width: 750px; 
+        height: 105px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .plan-details h3{
+        font-size: 17px;
+        font-weight: 600;
+    }
+    h2.upper-section-title,
+    h2.section-title,
+    h2.title{
+        font-size: 16px;
+    }
+   
+    .sidebar-offer {
+        width: 200px; 
+    }
+    .vertical-separator{
+        height: 105px;
+    }
+    .offer-box h3{
+        font-size: 16px;
+        font-weight: 300;
+    }
+    .offer-box{
+        height: 530px;
+        width: 170px;
+    }
+    .plan-tag{
+        font-size: 11px;
+        font-weight: bold;
+    }
+    .offer-box .offer-btn{
+        font-size: 12px;
+        width: 100px;
+    }
+    .offer-box .offer-details .offer-heading span{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .offer-box .offer-details .offer-heading{
+        font-size: 10px;
+    }
+    .offer-box .offer-details .offer-subheading{
+        font-size: 10px;
+        margin-top: -35px;
+    }
+    .offer-box .offer-details .offer-subheading span{
+        font-size: 15px;
+        margin-top: -15px;
+    }
+    .offer-box .offer-details .offer-valid{
+        font-size: 8px;
+    }
+    .subtitle{
+        font-size: 14px;
+        line-height: 1.3em;
+    }
+    .tab {
+        width: 130px; 
+        height: 35px;
+        padding: 2px;
+        text-align: center;
+    }
+
+    .tab:active {
         background-color: #f7f7f7;
     }
 }
@@ -491,6 +716,7 @@ h2.upper-section-title::after{
         height: 350px;
     }
 }
+
 
 </style>
 </head>
@@ -647,6 +873,25 @@ h2.upper-section-title::after{
         <!-- Tabs Section -->
 </div>
 
+<div class="ad-area">
+    <div class="sidebar-offer">
+        <div class="offer-box">
+        <h3>Celebration Offer</h3>
+
+            <img src="./images/offer.png" alt="Offer Image">
+            <div class="offer-details">
+                <p class="offer-heading"><span>Dussehra Offer</span> <br> Buy any update plan  and </p>
+                <p class="offer-subheading">Get 1 section update <br>
+                    <span>Worth <sup>₹</sup>299</span> </p>
+                <p class="offer-valid">Offer Valid Till 13 Oct 2024</p>
+                <a href="../offers/"><button class="offer-btn">Get Offer</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
 <script>
     document.getElementById('whatsappButton').addEventListener('click', function() {
         var phoneNumber = '9356393094'; // Add the WhatsApp number
@@ -685,7 +930,7 @@ h2.upper-section-title::after{
 
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
 <script data-cfasync="false" src="./email-decode.min.js"></script><script src="js/jquery.js"></script>
-<script src="./js/app.js"></script>
+<script src="../js/app.js"></script>
 
 <script src="../javascript.js"></script>
 

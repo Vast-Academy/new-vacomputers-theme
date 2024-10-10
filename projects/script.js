@@ -670,6 +670,11 @@ function displayProjectsWithHeading(heading, projects) {
     headingElement.classList.add('heading');
     headingElement.textContent = heading;
 
+    
+    // Generate a unique ID for each heading based on its name
+    const headingId = heading.toLowerCase().replace(/\s+/g, '-') + '-heading';
+    headingElement.id = headingId; // Assign unique ID to the heading
+
     // Determine which container to append to based on heading
     let container;
 
@@ -688,7 +693,7 @@ function displayProjectsWithHeading(heading, projects) {
 if (projects.length === 0) {
 const noProjectsMessage = document.createElement('p');
 noProjectsMessage.textContent = `No ${heading.toLowerCase()} available.`;
-mainContainer.appendChild(noProjectsMessage);
+container.appendChild(noProjectsMessage);
 return;
 }
 

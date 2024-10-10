@@ -22,8 +22,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 <style>
-    body{
+        body{
         font-family: Verdana;
+        scroll-behavior: smooth;
     }
  .website-plans {
     display: flex;
@@ -125,7 +126,7 @@ div.menu .menu-text p.active {
 /* Main Content */
 .main-content {
     flex-grow: 1;
-    /* padding: 20px; */
+    padding: 20px;
     background-color: #ffffff;
     overflow: scroll;
 }
@@ -726,7 +727,6 @@ h2.title::after {
     }
 }
 
-
 #spinner {
                     opacity: 0;
                     visibility: hidden;
@@ -958,17 +958,17 @@ class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-5
         <div class="sub-menu">
           <h3>Projects</h3>
           <ul class="menu">
-            <a href="">
+            <a href="#ongoing-projects-heading">
             <li class="menu-item active">
                 <i class="fas fa-briefcase"></i> On-Going
             </li>
         </a>
-        <a href="">
+        <a href="#content-update-heading">
             <li class="menu-item">
                 <i class="fas fa-sync-alt"></i> Content Update
             </li>
         </a>
-        <a href="">
+        <a href="#completed-projects-heading">
             <li class="menu-item">
                 <i class="fas fa-check-circle"></i> Completed
             </li>
@@ -1030,12 +1030,44 @@ class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-5
     <section id="third-container" class="main">
         <!-- <h2 class="heading">Completed Projects</h2> -->
     </section>
+      
+</div>
 
-        
-       
+<div class="ad-area">
+    <div class="sidebar-offer">
+        <div class="offer-box">
+        <h3>Celebration Offer</h3>
+
+            <img src="./images/offer.png" alt="Offer Image">
+            <div class="offer-details">
+                <p class="offer-heading"><span>Dussehra Offer</span> <br> Buy any update plan  and </p>
+                <p class="offer-subheading">Get 1 section update <br>
+                    <span>Worth <sup>₹</sup>299</span> </p>
+                <p class="offer-valid">Offer Valid Till 13 Oct 2024</p>
+                <a href="../offers/"><button class="offer-btn">Get Offer</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
 </div>
 
 
+<script>
+    // Get all menu-item elements
+    const menuItems = document.querySelectorAll('.menu-item');
+  
+    // Add click event listener to each item
+    menuItems.forEach(item => {
+      item.parentElement.addEventListener('click', function() {
+        // Remove active class from all menu items
+        menuItems.forEach(i => i.classList.remove('active'));
+  
+        // Add active class to the clicked item
+        item.classList.add('active');
+      });
+    });
+  </script>
 
 <script>
     document.querySelectorAll('.tab-btn').forEach(button => {
@@ -1063,7 +1095,7 @@ class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-5
 
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
 <script data-cfasync="false" src="./email-decode.min.js"></script><script src="js/jquery.js"></script>
-<script src="./js/app.js"></script>
+<script src="../js/app.js"></script>
 
 <script>
     // Spinner
