@@ -46,24 +46,6 @@ ul.menu li{
   border-radius: 15px;
   transition: background-color 0.3s ease;
 }
- div.menu{
-    display: flex;
-    justify-content: space-evenly;
-    width: 200px;
- }
- div.menu .icons ul li i{
-    font-size: 20px;
-    margin-bottom: 20px;
- }
- div.menu .menu-text p{
-    font-size: 18px;
- }
- div.menu .icons ul li.active i,
-div.menu .menu-text p.active {
-    color: #FF5733; 
-}
-
- 
 .menu-item i {
   margin-right: 20px;
   font-size: 20px;
@@ -218,7 +200,7 @@ transition-timing-function: cubic-bezier(.86, 0, .07, 1);
 }
 .offer-box {
     border: 1px solid #ccc;
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
     height: 670px;
     display: flex;
@@ -227,9 +209,9 @@ transition-timing-function: cubic-bezier(.86, 0, .07, 1);
 }
 
 .offer-box img {
-    /* width: 100%;
-    height: 200px; */
-    object-fit: cover;
+    /* width: 303px; */
+    height: 400px; 
+    object-fit:cover;
     border-radius: 5px;
     margin-bottom: 20px;
 }
@@ -237,7 +219,23 @@ transition-timing-function: cubic-bezier(.86, 0, .07, 1);
 .offer-details {
     text-align: center;
 }
-
+.offer-details p{
+    font-size: 12px;
+}
+.offer-box .offer-details .offer-heading span{
+    font-weight: bold;
+    font-size: 20px;
+}
+.offer-box .offer-details .offer-subheading{
+    margin-top: -30px;
+}
+.offer-box .offer-details .offer-subheading span{
+    font-weight: bold;
+    font-size: 18px;
+}
+.offer-box .offer-details .offer-valid{
+    color: #c40000;
+}
 .offer-btn {
     background-color: #ff3333;
     border: none;
@@ -245,6 +243,12 @@ transition-timing-function: cubic-bezier(.86, 0, .07, 1);
     width: 170px;
     padding: 5px;
     border-radius: 40px;
+    cursor: pointer;
+}
+button.offer-btn:hover {
+    background-color: transparent;
+    border: 1px solid #ff3333;
+    color: #ff3333;
     cursor: pointer;
 }
 h2.upper-section-title{
@@ -434,7 +438,7 @@ h2.upper-section-title::after{
             text-align: center;
             background: #eceaea;
             display: inline-block;
-            color: #000;
+            color: #7e7c7c;
             /* border-radius: 3px 3px 0px 0px; */
             border-left: 1px solid rgb(199, 196, 196);
             border-right: 1px solid rgb(199, 196, 196);
@@ -449,6 +453,9 @@ h2.upper-section-title::after{
         .tab p{
             font-size: 13px;
             margin-top: -4px;
+            font-weight: 550;
+            color: #666464;
+            font-family: Arial, Helvetica, sans-serif;
         }
         .panels {
             background: #fffffff6;
@@ -460,19 +467,22 @@ h2.upper-section-title::after{
             border-radius: 15px;
             overflow: hidden;
             margin-top: -4px;
-            /* padding: 5px; */
         }
         .active-tab {
             background: #fffffff6;
             color: #000;
-            /* border-top: 3px solid #000; */
+            border-top: 1px solid rgb(199, 196, 196);
             margin-bottom: 4px;
             box-shadow: 0px 3px 0px #fffffff7; 
             position: relative;
             z-index: 2;
             height: 26px;
-    margin-top: -3px; 
-    /* border-top: 2px solid grey; */
+            margin-top: -3px; 
+            /* border-top: 2px solid grey; */
+        }
+        
+        .active-tab p{
+            color: black;
         }
         .tab:hover{
             background-color:rgb(210, 232, 241) ;
@@ -506,7 +516,6 @@ h2.upper-section-title::after{
             width: 250px;
             height:135px;
             margin-left: 5px;
-            /* border: 1px solid black; */
             justify-content: center;
             align-items: center;
             display: flex;
@@ -523,9 +532,7 @@ h2.upper-section-title::after{
         }
         .website-desc h3{
             font-size: 22px;
-            font-family: Arial, Helvetica, sans-serif;
-            /* margin-bottom: 25px; */
-            /* border-bottom: 1px solid grey; */
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
         .website-desc h3::after {
     content: "";
@@ -533,10 +540,9 @@ h2.upper-section-title::after{
     width: 90%;
     height: 1px; 
     background-color: #b3aeae; 
-    margin-top: 25px; 
+    margin-top: 20px; 
 }
-
-        .website-desc h6{
+      .website-desc h6{
             margin-top: -8px;
             font-size: 16px;
             font-family: Arial, Helvetica, sans-serif;
@@ -558,23 +564,43 @@ h2.upper-section-title::after{
 
         .website-price{
             width: 180px;
-            height:140px;
-            margin-right: 5px;
-            /* border: 1px solid black; */
+            height:135px;
+            margin-right: 5px;         
         }
-        .website-price h2{
-            font-size: 34px;
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        .original-price {
+            font-size: 14px;
+            color: black;
+            margin-left: 55px;
+            position: relative;
+            display: inline-block;
             text-align: center;
+        }
+
+        .original-price::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #c40000;
+        }
+        .website-price .all-prices h2{
+            font-size: 24px;
+            margin-top: -20px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 10px;
         }
         .website-price button{
-            width: 180px;
-            text-align: center;
-            height: 35px;
-            border-radius: 10px;
-            font-size: 16px;
+            width: 120px;           
+            height: 30px;
+            margin-left: 35px;
+            border-radius: 20px;
+            font-size: 12px;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-family: Arial, Helvetica, sans-serif;
         }
         .website-price button.demo{
@@ -607,6 +633,12 @@ h2.upper-section-title::after{
     .sidebar-offer{
         width: 316px;
     }
+    .offer-box{
+        width: 210px;
+    }
+    .offer-details .offer-heading span{
+        font-size: 11px;
+    }
     /* .tab{
         width: 185px;
         height: 42px;
@@ -619,33 +651,111 @@ h2.upper-section-title::after{
 }
 
 /* Tablet (768x1024) */
-/* @media screen and (max-width: 1366px) {
+@media screen and (max-width: 1366px) {
     .sidebar {
         width: 250px; 
     }
+    .menu-item,
+    .sub-menu ul li {
+        font-size: 15px;
+    font-weight: 500;
+    }
+    .menu-item i {
+        margin-right: 10px;
+        margin-left: 0;
+    }
+    .sub-menu ul li i {
+  margin-right: 10px;
+  font-size: 20px;
+  margin-left: 0;
+}
     .main-content {
         padding: 20px;
         width: 950px; 
     }
-    
-    .pricing-card {
-        width: 800px;
-        padding: 15px;
-        margin: 10px 0;
+    .panels{
+        max-width: 850px;
+        min-height: 130px;
+    }
+    .website-card{
+        height: 130px;
+        padding: 5px;
+    }
+    .website-image{
+        margin-left: 0;
+        height: 112px;
+        width: 220px;
+    }
+    .website-image img{
+        border-radius: 10px;
+    }
+    .website-desc{
+        height: 112px;
+        width: 450px;
+    }
+    .website-desc h3{
+        font-size: 17px;
+    }
+    .website-desc h3::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px; 
+    background-color: #b3aeae; 
+    margin-top: 13px; 
+}
+.website-desc h6{
+    margin-top: -13px;
+    font-size: 12px;
+}
+.website-desc p{
+margin-top: -15px;
+font-size: 10.5px;
+line-height: 16px;
+}
+    .website-price{
+        margin-right: 0;
+        width: 125px;
+        height: 112px;
+    }
+    .website-price .all-prices{
+        margin-top: -10px;
+    }
+    .website-price .original-price{
+        margin-left: 20px;
+    }
+    .website-price .all-prices h2{
+        font-size: 20px;
+        margin-top: -28px;
+        margin-bottom: 8px;
+    }
+    .website-price button{
+        margin-left: 6px;
+        margin-bottom:5px ;
+        font-size: 11px;
+        width: 110px;
     }
     .sidebar-offer{
         width: 230px; 
     }
-    .tab{
-        width: 150px; 
-        height: 40px;
-        padding: 2px;
-        text-align: center;
+    .offer-box{
+        width: 158px;
     }
-    .tab:active{
-        background-color: #f7f7f7;
+    .offer-box h3{
+        font-size: 14px;
     }
-} */
+    .offer-box .offer-details .offer-heading span{
+        font-size: 17px;
+    }
+    .offer-box .offer-details .offer-heading,
+    .offer-box .offer-details .offer-subheading{
+        font-size: 10px;
+    }
+    .tabs{
+        margin-left: 300px;
+    }
+    
+}
 
 
 /* Mobile (360x850) */
@@ -850,15 +960,18 @@ h2.upper-section-title::after{
 
           <div class="website-card">
             <div class="website-image">
-                <img src="../images/website-ss.png" alt="">
+                <img src="../images/website-types/individuals-personal-static-website.png" alt="">
             </div>
             <div class="website-desc">
-            <h3>Personal Website</h3>
+            <h3>Personal Website (Static)</h3>
             <h6>For Highlighting A Journey Of Skill And Success</h6>
-            <p>Static Website | Up to 6 Pages | SEO Optimization | 1 Year Free Maintenance 4 Free <br> Content Updates within 30 Days after Project Completion. </p>
+            <p>Up to 5 Static Pages Website  | 1 Month SEO Optimization with 7 Keywords | 1 Year Free Maintenance | 4 Free Content Updates within 1 Month after Project Completion.</p>
             </div>
             <div class="website-price">
+               <div class="all-prices">
+                <p><span class="original-price">₹13,000.00</span></p>
                 <h2><sup>₹</sup>9,999.00</h2>
+               </div>
                 <button class="demo">Get Free Demo</button>
                 <button class="call-back">Arrange Call Back</button>
             </div>
@@ -869,17 +982,17 @@ h2.upper-section-title::after{
 
             <div class="website-card">
                 <div class="website-image">
-                    <img src="../images/website-ss.png" alt="">
+                    <img src="../images/website-types/individuals-personal-semidynamic-website.png" alt="">
                 </div>
-                <!-- <div class="website-image" style="background-image: url(../images/website-ss.png);">
-                </div> -->
                 <div class="website-desc">
-                <h3>Personal Website</h3>
+                <h3>Personal Website <span>(Semi Dynamic)</span></h3>
                 <h6>For Highlighting A Journey Of Skill And Success</h6>
-                <p>Static Website | Up to 6 Pages | SEO Optimization | 1 Year Free Maintenance 4 Free <br> Content Updates within 30 Days after Project Completion. </p>
+                <p>Up to 6 Static Pages with semi Dynamic Gallary | 1 Month SEO Optimization with 10 Keywords |
+                 1 Year Free Maintenance | 4 Free Content Updates within 1 Month after Project Completion.</p>
                 </div>
                 <div class="website-price">
-                    <h2><sup>₹</sup>9,999.00</h2>
+                    <p><span class="original-price">₹19,000.00</span></p>
+                    <h2><sup>₹</sup>12,499.00</h2>
                     <button class="demo">Get Free Demo</button>
                     <button class="call-back">Arrange Call Back</button>
                 </div>
@@ -890,17 +1003,16 @@ h2.upper-section-title::after{
 
          <div class="website-card">
             <div class="website-image">
-                <img src="../images/website-ss.png" alt="">
+                <img src="../images/website-types/individuals-personal-dynamic-website.png" alt="">
             </div>
-            <!-- <div class="website-image" style="background-image: url(../images/website-ss.png);">
-            </div> -->
             <div class="website-desc">
-            <h3>Personal Website</h3>
+            <h3>Personal Website <span>(Fully Dynamic)</span></h3>
             <h6>For Highlighting A Journey Of Skill And Success</h6>
-            <p>Static Website | Up to 6 Pages | SEO Optimization | 1 Year Free Maintenance 4 Free <br> Content Updates within 30 Days after Project Completion. </p>
+            <p>Up to 10 Pages Fully Customized Website With Admin Panel | 1 Month SEO Optimization with 15 Keywords | 1 Year Free Maintenance | 1 Month Free Support For Training Purpose </p>
             </div>
             <div class="website-price">
-                <h2><sup>₹</sup>9,999.00</h2>
+                <p><span class="original-price">₹60,000.00</span></p>
+                <h2><sup>₹</sup>45,999.00</h2>
                 <button class="demo">Get Free Demo</button>
                 <button class="call-back">Arrange Call Back</button>
             </div>
@@ -912,24 +1024,347 @@ h2.upper-section-title::after{
     </div>
   </div>
 
+    <!-- Card 2 -->
+<div class="card-wrapper">
+    <div class="warpper">
+      <div class="tabs">
+        <div class="tab" id="first"><p>Static</p></div>
+        <div class="tab" id="second"><p>Semi Dynamic</p></div>
+        <div class="tab" id="third"><p>Dynamic</p></div>
+      </div>
+      <div class="panels">
+        <div class="panel">
+
+          <div class="website-card">
+            <div class="website-image">
+                <img src="../images/website-types/individuals-personal-static-website.png" alt="">
+            </div>
+            <div class="website-desc">
+            <h3>Portfolio Website (Static)</h3>
+            <h6>Used by Individual to showcase their work and projects</h6>
+            <p>Up to 10 Static Pages Website  | 1 Month SEO Optimization with 10 Keywords | 1 Year Free Maintenance | 4 Free Content Updates within 1 Month after Project Completion.</p>
+            </div>
+            <div class="website-price">
+                <div class="all-prices">
+                    <p><span class="original-price">₹20,000.00</span></p>
+                <h2><sup>₹</sup>15,999.00</h2>
+                </div>
+                <button class="demo">Get Free Demo</button>
+                <button class="call-back">Arrange Call Back</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="panel">
+
+            <div class="website-card">
+                <div class="website-image">
+                    <img src="../images/website-types/individuals-personal-semidynamic-website.png" alt="">
+                </div>
+                <div class="website-desc">
+                <h3>Portfolio Website <span>(Semi Dynamic)</span></h3>
+                <h6>Used by Individual to showcase their work and projects</h6>
+                <p>Up to 12 Static Pages with Semi Dynamic Gallery | 1 Month SEO Optimization with 12 Keywords | 1 Year Free Maintenance | 4 Free Content Updates within 1 Month after Project Completion.</p>
+                </div>
+                <div class="website-price">
+                    <div class="all-prices">
+                        <p><span class="original-price">₹30,000.00</span></p>
+                    <h2><sup>₹</sup>20,999.00</h2>
+                    </div>
+                    <button class="demo">Get Free Demo</button>
+                    <button class="call-back">Arrange Call Back</button>
+                </div>
+              </div>
+
+        </div>
+        <div class="panel">
+
+         <div class="website-card">
+            <div class="website-image">
+                <img src="../images/website-types/individuals-personal-dynamic-website.png" alt="">
+            </div>
+            <div class="website-desc">
+            <h3>Portfolio Website <span>(Fully Dynamic)</span></h3>
+            <h6>Used by Individual to showcase their work and projects</h6>
+            <p>Up to 18 Pages With CMS | 1 Month SEO Optimization with 20 Keywords | 1 Year Free Maintenance | 1 Month Free Support For Training Purpose.</p>
+            </div>
+            <div class="website-price">
+                <div class="all-prices">
+                    <p><span class="original-price">₹90,000.00</span></p>
+                <h2><sup>₹</sup>65,999.00</h2>
+                </div>
+                <button class="demo">Get Free Demo</button>
+                <button class="call-back">Arrange Call Back</button>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+    <!-- Card 3 -->
+<div class="card-wrapper">
+    <div class="warpper">
+      <div class="tabs">
+        <div class="tab" id="first"><p>Static</p></div>
+        <div class="tab" id="second"><p>Semi Dynamic</p></div>
+        <div class="tab" id="third"><p>Dynamic</p></div>
+      </div>
+      <div class="panels">
+        <div class="panel">
+
+          <div class="website-card">
+            <div class="website-image">
+                <img src="../images/website-types/individuals-personal-static-website.png" alt="">
+            </div>
+            <div class="website-desc">
+            <h3>Business Website (Static)</h3>
+            <h6>To promote the products or services and engage with clients</h6>
+            <p>Up to 15 Static Pages | SEO Optimization with 15 Keywords | 1 Year Free Maintenance | 4 Free Content Updates within 1 Month after Project Completion.</p>
+            </div>
+            <div class="website-price">
+                <div class="all-prices">
+                    <p><span class="original-price">₹35,000.00</span></p>
+                <h2><sup>₹</sup>22,999.00</h2>
+                </div>
+                <button class="demo">Get Free Demo</button>
+                <button class="call-back">Arrange Call Back</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="panel">
+
+            <div class="website-card">
+                <div class="website-image">
+                    <img src="../images/website-types/individuals-personal-semidynamic-website.png" alt="">
+                </div>
+                <div class="website-desc">
+                <h3>Business Website <span>(Semi Dynamic)</span></h3>
+                <h6>To promote the products or services and engage with clients</h6>
+                <p>Up to 15 Static Pages with semi Dynamic Gallery | Semi Dynamic Hero Section | Live Chat Support | Up to 5 Contact Pop-up Forms | 1 Month SEO Optimization with 10 Keywords | 1 Year Free Maintenance | 4 Free Content Updates within 1 Month after Project Completion.</p>
+                </div>
+                <div class="website-price">
+                    <div class="all-prices">
+                        <p><span class="original-price">₹52,000.00</span></p>
+                    <h2><sup>₹</sup>35,999.00</h2>
+                    </div>
+                    <button class="demo">Get Free Demo</button>
+                    <button class="call-back">Arrange Call Back</button>
+                </div>
+              </div>
+
+        </div>
+        <div class="panel">
+
+         <div class="website-card">
+            <div class="website-image">
+                <img src="../images/website-types/individuals-personal-dynamic-website.png" alt="">
+            </div>
+            <div class="website-desc">
+            <h3>Business Website <span>(Fully Dynamic)</span></h3>
+            <h6>To promote the products or services and engage with clients</h6>
+            <p>Up to 18 Pages With CMS | Live Chat Support | Unlimited Contact Pop-Ups | 1 Month SEO Optimization with 20 Keywords | 1 Year Free Maintenance | 1 Month Free Support For Training Purpose.</p>
+            </div>
+            <div class="website-price">
+                <div class="all-prices">
+                    <p><span class="original-price">₹1,20,000.00</span></p>
+                <h2><sup>₹</sup>75,999.00</h2>
+                </div>
+                <button class="demo">Get Free Demo</button>
+                <button class="call-back">Arrange Call Back</button>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+   <!-- Card 4 -->
+<div class="card-wrapper">
+    <div class="warpper">
+      <div class="tabs">
+        <div class="tab" id="first"><p>Static</p></div>
+        <div class="tab" id="second"><p>Semi Dynamic</p></div>
+        <div class="tab" id="third"><p>Dynamic</p></div>
+      </div>
+      <div class="panels">
+        <div class="panel">
+
+          <div class="website-card">
+            <div class="website-image">
+                <img src="../images/website-types/individuals-personal-static-website.png" alt="">
+            </div>
+            <div class="website-desc">
+            <h3>Educational Website (Static)</h3>
+            <h6>To Provide information about courses, events, faculty, and student resources</h6>
+            <p>Up to 20 Static Pages | SEO Optimization with 15 Keywords | 1 Year Free Maintenance | 4 Free Content Updates within 1 Month after Project Completion.</p>
+            </div>
+            <div class="website-price">
+                <div class="all-prices">
+                    <p><span class="original-price">₹50,000.00</span></p>
+                <h2><sup>₹</sup>30,999.00</h2>
+                </div>
+                <button class="demo">Get Free Demo</button>
+                <button class="call-back">Arrange Call Back</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="panel">
+
+            <div class="website-card">
+                <div class="website-image">
+                    <img src="../images/website-types/individuals-personal-semidynamic-website.png" alt="">
+                </div>
+                <div class="website-desc">
+                <h3>Educational Website <span>(Semi Dynamic)</span></h3>
+                <h6>To Provide information about courses, events, faculty, and student resources</h6>
+                <p>Up to 20 Static Pages with semi Dynamic Gallery | 2 Semi Dynamic Pages | Up to 5  Pop-ups | 1 Month SEO Optimization with 10 Keywords | 1 Year Free Maintenance | 4 Free Content Updates within 1 Month after Project Completion.</p>
+                </div>
+                <div class="website-price">
+                    <div class="all-prices">
+                        <p><span class="original-price">₹70,000.00</span></p>
+                    <h2><sup>₹</sup>46,999.00</h2>
+                    </div>
+                    <button class="demo">Get Free Demo</button>
+                    <button class="call-back">Arrange Call Back</button>
+                </div>
+              </div>
+
+        </div>
+        <div class="panel">
+
+         <div class="website-card">
+            <div class="website-image">
+                <img src="../images/website-types/individuals-personal-dynamic-website.png" alt="">
+            </div>
+            <div class="website-desc">
+            <h3>Educational Website <span>(Fully Dynamic)</span></h3>
+            <h6>To Provide information about courses, events, faculty, and student resources</h6>
+            <p>Up to 20 Pages With CMS | Live Chat Support | Pop-ups For every Page | 1 Month SEO Optimization with 20 Keywords | 1 Year Free Maintenance | 1 Month Free Support For Training Purpose.</p>
+            </div>
+            <div class="website-price">
+                <div class="all-prices">
+                    <p><span class="original-price">₹1,25,000.00</span></p>
+                <h2><sup>₹</sup>79,999.00</h2>
+                </div>
+                <button class="demo">Get Free Demo</button>
+                <button class="call-back">Arrange Call Back</button>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+   <!-- Card 4 End -->
+
+    <!-- Card 5 -->
+<div class="card-wrapper">
+    <div class="warpper">
+      <div class="tabs">
+        <div class="tab" id="first"><p>Static</p></div>
+        <div class="tab" id="second"><p>Semi Dynamic</p></div>
+        <div class="tab" id="third"><p>Dynamic</p></div>
+      </div>
+      <div class="panels">
+        <div class="panel">
+
+          <div class="website-card">
+            <div class="website-image">
+                <img src="../images/website-types/individuals-personal-static-website.png" alt="">
+            </div>
+            <div class="website-desc">
+            <h3>Food Court Website (Static)</h3>
+            <h6>For showcasing available food vendors, menus, offers, and dining options at a food court</h6>
+            <p>Complete Catalogue | SEO Optimization with 7 Keywords | 1 Year Free Maintenance | 4 Free Content Updates within 1 Month after Project Completion.</p>
+            </div>
+            <div class="website-price">
+                <div class="all-prices">
+                    <p><span class="original-price">₹18,000.00</span></p>
+                <h2><sup>₹</sup>12,999.00</h2>
+                </div>
+                <button class="demo">Get Free Demo</button>
+                <button class="call-back">Arrange Call Back</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="panel">
+
+            <div class="website-card">
+                <div class="website-image">
+                    <img src="../images/website-types/individuals-personal-semidynamic-website.png" alt="">
+                </div>
+                <div class="website-desc">
+                <h3>Food Court Website <span>(Semi Dynamic)</span></h3>
+                <h6>For showcasing available food vendors, menus, offers, and dining options at a food court</h6>
+                <p>Complete Catalogue with Editable pricing  | 1 Customizable Section for Daily offers | 1 Month SEO Optimization with 12 Keywords | 1 Year Free Maintenance | 4 Free Content Updates within 1 Month after Project Completion.</p>
+                </div>
+                <div class="website-price">
+                    <div class="all-prices">
+                        <p><span class="original-price">₹30,000.00</span></p>
+                    <h2><sup>₹</sup>20,999.00</h2>
+                    </div>
+                    <button class="demo">Get Free Demo</button>
+                    <button class="call-back">Arrange Call Back</button>
+                </div>
+              </div>
+
+        </div>
+        <div class="panel">
+
+         <div class="website-card">
+            <div class="website-image">
+                <img src="../images/website-types/individuals-personal-dynamic-website.png" alt="">
+            </div>
+            <div class="website-desc">
+            <h3>Food Court Website <span>(Fully Dynamic)</span></h3>
+            <h6>For showcasing available food vendors, menus, offers, and dining options at a food court</h6>
+            <p>Fully customizable website | User can add edit or delete food menu | Online Order Facility | Branches System |  Customizable daily Offers | 1 Month SEO Optimization with 20 Keywords | 1 Year Free Maintenance | 1 Month Free Support For Training Purpose.</p>
+            </div>
+            <div class="website-price">
+                <div class="all-prices">
+                    <p><span class="original-price">₹1,20,000.00</span></p>
+                <h2><sup>₹</sup>75,999.00</h2>
+                </div>
+                <button class="demo">Get Free Demo</button>
+                <button class="call-back">Arrange Call Back</button>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+   <!-- Card 5 End -->
+
     </div>
 
     <!-- Sidebar Offer Section -->
-     <div class="ad-area">
-    <div class="sidebar-offer">
-        <div class="offer-box">
-        <h3>Celebration Offer</h3>
-
-            <img src="https://fakeimg.pl/80x130" alt="Offer Image">
-            <div class="offer-details">
-                <p><b>Diwali Offer</b><br> 2 Updates free on 90 Days Plan! </p>
-                <p></p>
-                <br>
-                <button class="offer-btn">Get Offer</button>
+    <div class="ad-area">
+        <div class="sidebar-offer">
+            <div class="offer-box">
+            <h3>Celebration Offer</h3>
+    
+                <img src="../images/offer.png" alt="Offer Image">
+                <div class="offer-details">
+                    <p class="offer-heading"><span>Diwali Offer</span> <br> Buy any update plan  and </p>
+                    <p class="offer-subheading">Get 1 section update <br>
+                        <span>Worth <sup>₹</sup>299</span> </p>
+                    <p class="offer-valid">Offer Valid Till 02 Nov 2024</p>
+                    <a href="../offers/"><button class="offer-btn">Get Offer</button></a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 </div>
 
