@@ -225,6 +225,21 @@ button.offer-btn:hover {
     color: #ff3333;
     cursor: pointer;
 }
+.sort-options {
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sort-options label {
+    margin-right: 10px;
+}
+
+.sort-options select {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
         .card-wrapper {
             margin-bottom: 40px;
         }
@@ -261,7 +276,7 @@ button.offer-btn:hover {
             background: #fffffff6;
             /* border: 1px solid rgb(199, 196, 196); */
             border-top: 1px solid rgb(199, 196, 196);
-            min-height: 160px;
+            min-height: auto;
             width: 100%;
             max-width: 1050px;
             border-radius: 15px;
@@ -304,10 +319,10 @@ button.offer-btn:hover {
         }
         .website-card{
             box-sizing: border-box;
-            height: 160px;
+            height: fit-content;
             padding: 15px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
         }
         .website-image{
@@ -322,10 +337,11 @@ button.offer-btn:hover {
         }
         .website-image img{
             width: 250px;
+            border: 3px solid black;
         }
         .website-desc{
-            width: 530px;
-            height:135px;
+            width: 550px;
+            height:auto;
             /* border: 1px solid black; */
         }
         .website-desc h3{
@@ -338,16 +354,18 @@ button.offer-btn:hover {
     width: 90%;
     height: 1px; 
     background-color: #b3aeae; 
-    margin-top: 20px; 
+    margin-top: 15px; 
 }
       .website-desc h6{
             margin-top: -8px;
-            font-size: 16px;
-            font-family: Arial, Helvetica, sans-serif;
-            letter-spacing: 0.05px;
+            font-size: 10.5px;
+            line-height: 20px;
+            /* font-family:Arial, Helvetica, sans-serif;
+            letter-spacing: 0.1px;
+            word-spacing: 1px; */
         }
         .website-desc p{
-            margin-top: -10px;
+            margin-top: -8px;
             font-size: 10.5px;
             line-height: 22px;
         }
@@ -357,7 +375,7 @@ button.offer-btn:hover {
     width: 90%;
     height: 1px;
     background-color: #b3aeae; 
-    margin-top: 5px; 
+    margin-top: 8px; 
 }
 
         .website-price{
@@ -473,10 +491,10 @@ button.offer-btn:hover {
     }
     .panels{
         max-width: 850px;
-        min-height: 130px;
+        /* min-height: 130px; */
     }
     .website-card{
-        height: 130px;
+        /* height: 130px; */
         padding: 5px;
     }
     .website-image{
@@ -488,7 +506,7 @@ button.offer-btn:hover {
         border-radius: 10px;
     }
     .website-desc{
-        height: 112px;
+        height: auto;
         width: 450px;
     }
     .website-desc h3{
@@ -500,14 +518,14 @@ button.offer-btn:hover {
     width: 90%;
     height: 1px; 
     background-color: #b3aeae; 
-    margin-top: 13px; 
+    margin-top: 8px; 
 }
 .website-desc h6{
-    margin-top: -13px;
+    /* margin-top: -13px; */
     font-size: 12px;
 }
 .website-desc p{
-margin-top: -15px;
+margin-top: -10px;
 font-size: 10.5px;
 line-height: 16px;
 }
@@ -745,15 +763,16 @@ line-height: 16px;
     <!-- Main Content -->
     <div class="main-content">
 
-        <div class="sorting">
-            <label for="sortOptions">Sort by: </label>
+        <div class="sort-options">
+            <label for="sort-select">Sort by:</label>
             <select id="sortOptions">
-              <option value="nameAsc">Name: A to Z</option>
-              <option value="nameDesc">Name: Z to A</option>
-              <option value="priceAsc">Price: Low to High</option>
-              <option value="priceDesc">Price: High to Low</option>
+                <option value="name-asc">Name: A to Z</option>
+                <option value="name-desc">Name: Z to A</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
             </select>
-          </div>
+        </div>
+        
           
 
           
@@ -797,8 +816,9 @@ line-height: 16px;
                 <div class="website-desc">
                 <h3>Personal Website</h3>
                 <h6>For Highlighting A Journey Of Skill And Success</h6>
-                <p>Up to 6 Static Pages with semi Dynamic Gallary | 1 Month SEO Optimization with 10 Keywords |
-                 1 Year Free Maintenance | 4 Free Content Updates within 1 Month after Project Completion.</p>
+                <p>Up to 6 Static Pages with semi Dynamic Gallary | 1 Month SEO Optimization with 10 Keywords
+                    | 1 Year Free Maintenance | 4 Free Content Updates within 1 Month after Project Completion.
+                 </p>
                 </div>
                 <div class="website-price">
                    <div class="all-prices">
@@ -819,8 +839,9 @@ line-height: 16px;
             </div>
             <div class="website-desc">
             <h3>Personal Website</h3>
-            <h6>For Highlighting A Journey Of Skill And Success</h6>
-            <p>Up to 10 Pages Fully Customized Website With Admin Panel | 1 Month SEO Optimization with 15 Keywords | 1 Year Free Maintenance | 1 Month Free Support For Training Purpose </p>
+            <h6>For Highlighting A Journey Of Skill And Success
+            </h6>
+            <p>Up to 10 Pages Fully Customized Website With Admin Panel | 1 Month SEO Optimization with 15 Keywords | 1 Year Free Maintenance | 1 Month Free Support For Training Purpose.</p>
             </div>
             <div class="website-price">
                 <div class="all-prices">
@@ -1183,23 +1204,18 @@ line-height: 16px;
 </div>
 
 <script>
-    // Loop over each card-wrapper
     document.querySelectorAll('.card-wrapper').forEach(card => {
         const tabs = card.querySelectorAll('.tab');
         const panels = card.querySelectorAll('.panel');
 
-        // Default active tab and panel for each card
         tabs[0].classList.add('active-tab');
         panels[0].classList.add('active-panel');
 
-        // Add event listeners to tabs
         tabs.forEach((tab, index) => {
             tab.addEventListener('click', () => {
-                // Remove active class from all tabs and panels within the card
                 tabs.forEach(t => t.classList.remove('active-tab'));
                 panels.forEach(p => p.classList.remove('active-panel'));
 
-                // Add active class to the clicked tab and corresponding panel
                 tab.classList.add('active-tab');
                 panels[index].classList.add('active-panel');
             });
@@ -1208,51 +1224,62 @@ line-height: 16px;
 </script>
 
 <script>
-   // Get the sorting dropdown
-const sortOptions = document.getElementById('sortOptions');
+   // Select the sort dropdown and all card wrappers
+const sortDropdown = document.getElementById('sortOptions');
+const cardWrappers = document.querySelectorAll('.card-wrapper .warpper');
 
-// Add event listener for sorting change
-sortOptions.addEventListener('change', () => {
-    // Get the "Static" tab panel
-    const staticPanel = document.querySelectorAll('.panel')[0];
+// Function to sort cards within the Static tab
+function sortCards() {
+    const selectedOption = sortDropdown.value; // Get selected option here
+    console.log("Selected Option:", selectedOption); // Debugging line
 
-    // Get all the cards in the "Static" tab
-    const cards = Array.from(staticPanel.querySelectorAll('.website-card'));
+    cardWrappers.forEach((wrapper) => {
+        const staticPanel = wrapper.querySelector('.panels .panel.active-panel'); // Select the active panel (Static)
+        console.log("Static Panel:", staticPanel); // Debugging line
+        
+        if (!staticPanel) {
+            console.error("Static panel not found!"); // Error message if staticPanel is null
+            return; // Exit if the static panel is not found
+        }
 
-    // Sort the cards based on the selected option
-    const sortValue = sortOptions.value;
-    let sortedCards;
-    
-    if (sortValue === 'nameAsc') {
-        sortedCards = cards.sort((a, b) => {
-            const nameA = a.querySelector('.website-desc h3').textContent.toUpperCase();
-            const nameB = b.querySelector('.website-desc h3').textContent.toUpperCase();
-            return nameA.localeCompare(nameB);
-        });
-    } else if (sortValue === 'nameDesc') {
-        sortedCards = cards.sort((a, b) => {
-            const nameA = a.querySelector('.website-desc h3').textContent.toUpperCase();
-            const nameB = b.querySelector('.website-desc h3').textContent.toUpperCase();
-            return nameB.localeCompare(nameA);
-        });
-    } else if (sortValue === 'priceAsc') {
-        sortedCards = cards.sort((a, b) => {
-            const priceA = parseFloat(a.querySelector('.website-price h2').textContent.replace(/[^\d.]/g, ''));
-            const priceB = parseFloat(b.querySelector('.website-price h2').textContent.replace(/[^\d.]/g, ''));
-            return priceA - priceB;
-        });
-    } else if (sortValue === 'priceDesc') {
-        sortedCards = cards.sort((a, b) => {
-            const priceA = parseFloat(a.querySelector('.website-price h2').textContent.replace(/[^\d.]/g, ''));
-            const priceB = parseFloat(b.querySelector('.website-price h2').textContent.replace(/[^\d.]/g, ''));
-            return priceB - priceA;
-        });
-    }
+        const cards = Array.from(staticPanel.querySelectorAll('.website-card')); // Get all website cards in the Static panel
+        console.log("Cards Found:", cards.length); // Debugging line
+        
+        // If no cards found, log a message and exit
+        if (cards.length === 0) {
+            console.warn("No cards found in the Static panel!");
+            return; // Exit if no cards are found
+        }
 
-    // Clear the static panel and re-append sorted cards
-    staticPanel.innerHTML = '';
-    sortedCards.forEach(card => staticPanel.appendChild(card));
-});
+        // Sort cards based on the selected option
+        const sortedCards = cards.sort((a, b) => {
+            let aValue, bValue;
+
+            if (selectedOption.includes('name')) {
+                aValue = a.querySelector('h3').innerText.toLowerCase();
+                bValue = b.querySelector('h3').innerText.toLowerCase();
+                return selectedOption === 'name-asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
+            } else if (selectedOption.includes('price')) {
+                aValue = parseFloat(a.querySelector('.website-price h2').innerText.replace(/₹|,/g, '').trim());
+                bValue = parseFloat(b.querySelector('.website-price h2').innerText.replace(/₹|,/g, '').trim());
+                return selectedOption === 'price-asc' ? aValue - bValue : bValue - aValue;
+            }
+            return 0; // Default case if no sorting option matches
+        });
+
+        // Clear the existing cards and append the sorted cards
+        staticPanel.innerHTML = ''; // Clear existing cards
+        sortedCards.forEach((card) => staticPanel.appendChild(card)); // Append sorted cards back
+    });
+}
+
+// Event listener for sort dropdown
+if (sortDropdown) {
+    sortDropdown.addEventListener('change', sortCards);
+} else {
+    console.error("Sort dropdown not found!"); // Error message if dropdown is not found
+}
+
 
 </script>
 
