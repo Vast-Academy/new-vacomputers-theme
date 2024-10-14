@@ -128,105 +128,33 @@ div.menu .menu-text p.active {
     padding: 20px;
     background-color: #ffffff;
     overflow: scroll;
-}
-div.all-plans{
     display: flex;
     justify-content: center;
-    align-items: center;
 }
-/* Tabs */
-/* div.main-tab{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
+.main-container{
+    width: 900px;
 }
-.tabs{
-    width: 400px;
-} */
-/* .tabs ul{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.tabs ul li,
-.tabs ul li a{
-    position: relative;
-display: inline-block;
-line-height: 24px;
-padding: 0 2px 10px;
-cursor: pointer;
-color: #797f7d;
-font-weight: 500;
-font-size: 18px;
-margin: 0 12px;
-transition: all 300ms ease;
-}
-.tabs ul li.active,
-.tabs ul li:hover{
-    color: black;
-}
-.tabs ul li a.active,
-.tabs ul li a:hover{
-    color: black;
-}
-.tabs ul li:before{
-    position: absolute;
-left: 0;
-bottom: 8px;
-height: 2px;
-width: 100%;
-content: "";
-background-color: #c40000;
-transform: scale(0, 1);
-transform-origin: top right;
-transition: transform 500ms cubic-bezier(.86, 0, .07, 1);
-transition-timing-function: cubic-bezier(.86, 0, .07, 1);
-}
-.tabs ul li a:before{
-    position: absolute;
-left: 0;
-bottom: 8px;
-height: 2px;
-width: 100%;
-content: "";
-background-color: #c40000;
-transform: scale(0, 1);
-transform-origin: top right;
-transition: transform 500ms cubic-bezier(.86, 0, .07, 1);
-transition-timing-function: cubic-bezier(.86, 0, .07, 1);
-}
-.tabs ul li.active:before,
-.tabs ul li:hover:before{
-    transform: scale(1, 1);
-    transform-origin: bottom left;
-} */
-
-.plans{
-    display: flex;
-    flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%; 
-}
-
-.pricing-section {
-    padding: 50px;
-    border-radius: 8px;
-}
-
-.pricing-section h2 {
+.main-container h2{
     text-align: center;
-    font-family: Roboto, sans-serif;
-    font-size: 36px;
-    font-weight: 500;
-    letter-spacing: 0.1px;
-    margin-bottom: 5px;
+    font-size: 40px;
+    margin-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-
-
+.main-container p{
+    text-align: left;
+}
+.main-container h3{
+    font-size: 30px;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.main-container ol{
+    margin-bottom: 50px;
+}
+.main-container ol li{
+    list-style-type: decimal;
+}
 /* Sidebar Offer Section */
 .ad-area{
     display: flex;
@@ -294,170 +222,6 @@ button.offer-btn:hover {
     color: #ff3333;
     cursor: pointer;
 }
-h2.upper-section-title,
-h2.section-title,
-h2.title{
-    /* position: relative; */
-            margin-top: 40px;
-            padding-bottom: 10px;
-            font-size: 24px;
-            font-family: Roboto, sans-serif;
-            margin-left: -30px;
-            text-align: left;    
-}
-/* h2.upper-section-title::after{
-    content: "";
-    position: absolute; 
-    left: 231px; 
-    right: 0; 
-    bottom: 20px; 
-    height: 1px; 
-    background-color: grey; 
-} */
-       
-/* .section-title::after {
-    content: "";
-    position: absolute; 
-    left: 200px; 
-    right: 0; 
-    bottom: 20px; 
-    height: 1px; 
-    background-color: grey; 
-}
-
-h2.title::after {
-    content: "";
-    position: absolute; 
-    left: 115px; 
-    right: 0; 
-    bottom: 20px; 
-    height: 1px; 
-    background-color: grey; 
-} */
- .guideline{
-    font-size: 17px;
-    font-family: Arial, sans-serif;
-    font-weight: 400;
-    letter-spacing: 0px;
-    line-height: 22px;
-    margin-top: 30px;
-    margin-bottom: 80px;
- }
-/* .subtitle {
-            text-align:left;
-            color: black;
-            line-height: 22px;
-            margin-top: -10px;
-            font-size: 17px;
-            font-family: Arial, sans-serif;
-            font-weight: normal;
-        } */
-
-.pricing-card {
-            background: white;
-            border-radius: 4px;
-            padding: 15px;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow:
-        2px 2px 5px 3px rgba(0, 0, 0, 0.05),  /* right-bottom */
-        -2px -2px 5px 3px rgba(0, 0, 0, 0.05), /* left-top */
-        2px -2px 5px 3px rgba(0, 0, 0, 0.05),  /* right-top */
-        -2px 2px 5px 3px rgba(0, 0, 0, 0.05);  /* left-bottom */
-        }
-        .pricing-starting{
-            /* width: 500px; */
-            display: flex;
-            justify-content: center;
-        }
-        
-        .plan-info{
-            width: 120px;
-            text-align: center;
-        }
-        .plan-tag,
-        .basic-plan,
-        .budget-plan,
-        .premium-plan,
-        .popular-plan,
-        .add-on {
-            background: yellow;
-            color: black;
-            padding: 2px 8px;
-            /* border-radius: 4px; */
-            font-size: 13px;
-            font-weight: bold;
-            display: inline-block;
-            line-height: normal;
-        }
-        /* .basic-plan{
-            background-color: #3498db;
-            color: #fff;
-        }
-        .budget-plan{
-            background-color:#27ae60;
-            color: #fff;
-        }
-        .premium-plan{
-            background-color: purple;
-        }
-        .popular-plan{
-            background-color: #e74c3c;
-        }
-        .add-on{
-            background-color: rgb(221, 10, 80);
-        } */
-        .price {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .plan-details h3 {
-            font-size: 18px;
-            margin-top: 10px;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        .plan-details p {
-            margin: 0;
-            color:#454747;
-            font-size: 14px;
-            line-height: 1.2em;
-        }
-        .vertical-separator {
-    border-left: 2px solid #ddd;
-    height: 60px;
-    margin: 0 10px;
-}
-        .buy-button {
-            background:#FFD700;
-            color: black;
-            border: none;
-            padding: 5px;
-            width: 180px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        button.buy-button:hover {
-            background: transparent;
-            border: 1px solid #FFD700;
-            color: black;
-            cursor: pointer;
-        }
-        
- ul.notice{
-    margin-top: -5px;
- }
-        ul.notice li{
-            list-style-type:disc;
-            color: rgb(83, 82, 82);
-            line-height: 22px;
-            font-family: Arial, sans-serif;
-            /* margin-top: -10px; */
-        }
 
 /* -------- Media Queries -------- */
 
@@ -802,10 +566,10 @@ h2.title::after {
     </div>
 </header>
 
-<div class="under-construction" style="background-image: url(../images/website-under-construction-image-2.png); background-size:auto; background-repeat: no-repeat;background-position: center;"></div>
+<!-- <div class="under-construction" style="background-image: url(../images/website-under-construction-image-2.png); background-size:auto; background-repeat: no-repeat;background-position: center;"></div> -->
 
 
-<!-- <div class="website-plans">
+<div class="website-plans">
     <div class="sidebar">
         <ul class="menu">
             <a href="../">
@@ -874,10 +638,26 @@ h2.title::after {
         </a>
           </ul>
         </div>
-      </div> -->
+      </div>
 
     <!-- Main Content -->
-    <!-- <div class="main-content">
+    <div class="main-content">
+        <div class="main-container">
+            <h2>Web Application Development Services</h2>
+            <p>Unlock the full potential of your business with our custom web application development services! We specialize in creating powerful, scalable applications tailored to meet your unique needs.</p>
+            <h3>Our Approach to Web Application Development</h3>
+            <ol>
+                <li>  <b>In-Depth Consultation:</b> We begin by understanding your business goals and requirements, ensuring we create an application that aligns with your objectives.</li>
+                <li> <b>Custom Solutions:</b> Our team develops tailored web applications that enhance efficiency, streamline processes, and address specific challenges within your organization.</li>
+                <li><b>User-Centric Design:</b> We prioritize user experience by designing intuitive interfaces that make it easy for users to navigate and engage with your application.</li>
+                <li>  <b>Robust Development:</b> Utilizing the latest technologies and frameworks, we build secure and scalable web applications that can grow with your business.</li>
+                <li><b>Integration Capabilities:</b> Our applications easily integrate with existing systems and third-party services, providing you with a seamless operational experience.</li>
+                <li> <b>Ongoing Support and Maintenance:</b> We offer continuous support and maintenance services to ensure your web application runs smoothly and adapts to changing business needs.</li>
+            </ol>
+            <p>With our expertise in web application development, you’ll have a powerful tool that enhances productivity and drives success.
+                <br>
+                Ready to transform your business processes? Explore our Web Application Plans to find the ideal solution for your needs!</p>
+        </div>
        </div>
        
        <div class="ad-area">
@@ -897,7 +677,7 @@ h2.title::after {
         </div>
     </div>
 
-</div> -->
+</div>
 
 <script>
     document.getElementById('whatsappButton').addEventListener('click', function() {
