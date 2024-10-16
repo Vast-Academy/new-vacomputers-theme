@@ -32,7 +32,7 @@
 /* Sidebar */
 .sidebar {
   width: 250px;
-  background-color: #ffffff;
+  background-color: #181818;
   padding: 20px;
   height: 100vh;
   border-right: 1px solid #ddd;
@@ -52,6 +52,7 @@ ul.menu li{
   padding: 10px;
   cursor: pointer;
   border-radius: 15px;
+  color: #ffffff;
   transition: background-color 0.3s ease;
 }
  div.menu{
@@ -82,7 +83,8 @@ div.menu .menu-text p.active {
 
 .menu-item.active,
 .menu-item:hover {
-  background-color: #ddd;
+  background-color: #ffffff;
+  color: #181818;
 }
 
 .separator {
@@ -99,6 +101,8 @@ div.menu .menu-text p.active {
 .sub-menu h3 {
   font-size: 20px;
   margin-bottom: 10px;
+  color: #ffffff;
+
 }
 
 .sub-menu ul {
@@ -125,9 +129,47 @@ div.menu .menu-text p.active {
 .main-content {
     flex-grow: 1;
     padding: 20px;
-    /* background-color: #ffffff; */
-    /* overflow: scroll; */
-   
+    background-color: #ffffff;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+}
+.main-container{
+    width: 800px;
+}
+.main-container h2{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-container p{
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 40px;
+    line-height: 24px;
+    /* text-align: center; */
+}
+.main-container .image{
+display: flex;
+justify-content: center;    
+}
+.main-container h3{
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    letter-spacing: 0.1px;
+}
+.main-container ol{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.main-container ol li{
+    list-style-type: decimal;
+    line-height: 24px;
+    margin-bottom: 20px;
 }
 div.all-plans{
     display: flex;
@@ -803,11 +845,11 @@ h2.title::after {
 </header>
 
 
-<div class="under-construction" style="background-image: url(../images/website-under-construction-image-2.png); background-size:auto; background-repeat: no-repeat;background-position: center;">
+<!-- <div class="under-construction" style="background-image: url(../images/website-under-construction-image-2.png); background-size:auto; background-repeat: no-repeat;background-position: center;"> -->
 
 </div>
 
-<!-- <div class="website-plans">
+<div class="website-plans">
     <div class="sidebar">
         <ul class="menu">
             <a href="../">
@@ -876,13 +918,33 @@ h2.title::after {
         </a>
           </ul>
         </div>
-      </div> -->
+      </div>
 
     <!-- Main Content -->
-    <!-- <div class="main-content" style="background-image: url(../images/website-under-construction.png); background-size: contain; background-repeat: no-repeat;">
-</div> -->
+    <div class="main-content">
+        <div class="main-container">
+            <h2>Digital Marketing </h2>
+            <p>Elevate your online presence and drive engagement with our <b>Digital Marketing Services!</b> We craft <b>tailored strategies</b> to connect with your target audience, enhancing visibility and delivering measurable results. From social media and SEO to content and email marketing, we help you build meaningful connections that drive growth and boost your brand’s success.</p>
+            <div class="image">
+                <img src="../images/services/digital-marketing-service.png" alt="">
+            </div>
 
-<!-- <div class="ad-area">
+            <h3>Our Approach To Digital Marketing:</h3>
+            <ol>
+                <li>  <b>Strategic Planning:</b>We start by analyzing your business goals, target audience, and market trends to develop a customized digital marketing strategy that aligns with your objectives.</li>
+                <li> <b>Content Creation:</b> Our team creates engaging, high-quality content that resonates with your audience and showcases your brand’s unique voice across various platforms.</li>
+                <li>  <b>Search Engine Optimization (SEO):</b> We implement proven SEO techniques to improve your website’s visibility on search engines, driving organic traffic and increasing brand awareness.</li>
+                <li><b>Social Media Marketing: </b>We leverage the power of social media to build your brand, engage with your audience, and drive traffic to your website through targeted campaigns.</li>
+                <li><b>Pay-Per-Click (PPC) Advertising:</b> Our PPC experts design and manage effective ad campaigns that deliver immediate results, maximizing your return on investment.</li>
+                <li> <b>Analytics and Reporting:</b>We continuously monitor campaign performance and provide detailed reports, allowing us to make data-driven adjustments that optimize results.</li>
+            </ol>
+            <p>With our digital marketing services, you’ll experience increased visibility, enhanced engagement, and measurable results. 
+                <br> <br>
+                Ready to take your online marketing to the next level? Check out our <b>Digital Marketing</b> Plans to find the perfect fit for your business!</p>
+        </div>
+</div>
+
+<div class="ad-area">
     <div class="sidebar-offer">
         <div class="offer-box">
         <h3>Celebration Offer</h3>
@@ -899,7 +961,7 @@ h2.title::after {
     </div>
 </div>
 
-</div> -->
+</div>
 
 <script>
     document.getElementById('whatsappButton').addEventListener('click', function() {

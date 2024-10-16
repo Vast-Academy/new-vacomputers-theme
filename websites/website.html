@@ -32,7 +32,7 @@
 /* Sidebar */
 .sidebar {
   width: 250px;
-  background-color: #181818;
+  background-color: #ffffff;
   padding: 20px;
   height: 100vh;
   border-right: 1px solid #ddd;
@@ -52,8 +52,6 @@ ul.menu li{
   padding: 10px;
   cursor: pointer;
   border-radius: 15px;
-  color: #f7f7f7;
-
   transition: background-color 0.3s ease;
 }
  div.menu{
@@ -84,13 +82,12 @@ div.menu .menu-text p.active {
 
 .menu-item.active,
 .menu-item:hover {
-  background-color: #363636;
-  color: #ffffff;
+  background-color: #ddd;
 }
 
 .separator {
   border: none;
-  border-top: 2px solid #2c2b2b;
+  border-top: 2px solid #8a8787;
   margin: 15px 0;
 }
 
@@ -102,7 +99,6 @@ div.menu .menu-text p.active {
 .sub-menu h3 {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #ffffff;
 }
 
 .sub-menu ul {
@@ -131,55 +127,8 @@ div.menu .menu-text p.active {
     padding: 20px;
     background-color: #ffffff;
     overflow: scroll;
-    display: flex;
-    justify-content: center;
 }
-.main-content {
-    -ms-overflow-style: none; /* Internet Explorer ke liye */
-    scrollbar-width: none; 
-}
-.main-container{
-    width: 800px;
-}
-.main-container h2{
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.main-container p{
-    text-align: left;
-    font-size: 14px;
-    line-height: 24px;
-    margin-bottom: 40px;
-    /* text-align: center; */
-}
-.main-container .image{
-display: flex;
-justify-content: center;    
-}
-.main-container h3{
-    font-size: 24px;
-    font-weight: 500;
-    margin-top: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
-    letter-spacing: 0.1px;
-}
-.main-container ol{
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-.main-container ol li{
-    list-style-type: decimal;
-    line-height: 24px;
-    margin-bottom: 20px;
-}
-div.all-plans{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 /* Sidebar Offer Section */
 .ad-area{
     display: flex;
@@ -255,12 +204,12 @@ h2.heading{
 p.website-desc{
     margin-bottom: 50px;
 }
-/* .main-content h3{
+.main-content h3{
     text-align: center;
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 60px;
-} */
+}
 .website-container {
       width: 900px;
       margin: 0 auto;
@@ -704,26 +653,58 @@ p.website-desc{
 
     <!-- Main Content -->
     <div class="main-content">
-        <div class="main-container">
-            <h2>Website Development</h2>
-            <p>Discover how we create websites that not only <b>look stunning</b> but also <b>perform seamlessly!</b> Our designs are tailored to bring your vision to life, offering captivating, <b>responsive</b> and <b>user-friendly</b> experiences. We focus on both aesthetics and functionality, ensuring your website engages visitors and delivers an excellent user experience across all devices.</p>
-            <div class="image">
-                <img src="../images/services/website-development-service.png" alt="">
+        <h2 class="heading">Website Development</h2>
+        <p class="website-desc">Discover how we create websites that look great and perform even better, turning your vision into captivating, responsive, and user-friendly designs!</p>
+        <h3>Our Approach to Website Development</h3>
+        <div class="website-container">
+            <div class="content left">
+              <img src="https://fakeimg.pl/250x200" alt="Image 1">
+              <p>
+                <b>1. Understanding Your Needs:</b> We start by collaborating with you to understand your business goals, target audience, and specific requirements. This ensures that the website we build aligns perfectly with your vision.
+              </p>
+            </div>
+        
+            <div class="content right">
+              <img src="https://fakeimg.pl/250x200" alt="Image 2">
+              <p>
+                <b>2. Custom Design:</b> Our talented designers craft unique, visually appealing layouts that reflect your brand identity and engage your visitors, ensuring a memorable experience.
+              </p>
+            </div>
+        
+            <div class="content left">
+              <img src="https://fakeimg.pl/250x200" alt="Image 3">
+              <p>
+                <b>3. Responsive Development:</b> We build websites that adapt seamlessly to all devices, providing a consistent experience for users on desktops, tablets, and smartphones.
+              </p>
+            </div>
+        
+            <div class="content right">
+              <img src="https://fakeimg.pl/250x200" alt="Image 4">
+              <p>
+                <b>4. User-Centric Focus:</b> Our development process prioritizes user experience, ensuring intuitive navigation and easy access to information, which keeps visitors engaged and encourages conversions.
+              </p>
+            </div>
+        
+            <div class="content left">
+              <img src="https://fakeimg.pl/250x200" alt="Image 5">
+              <p>
+                <b>5. Performance and SEO Optimization:</b> We implement best practices for performance optimization, ensuring fast load times, and integrate SEO strategies to enhance your website's visibility on search engines.
+              </p>
             </div>
 
-            <h3>Our Approach to Website Development:</h3>
-            <ol>
-                <li>  <b>Understanding Your Needs:</b>  We start by collaborating with you to understand your business goals, target audience, and specific requirements. This ensures that the website we build aligns perfectly with your vision.</li>
-                <li> <b>Custom Design:</b> Our talented designers craft unique, visually appealing layouts that reflect your brand identity and engage your visitors, ensuring a memorable experience.</li>
-                <li><b> Responsive Development:</b> We build websites that adapt seamlessly to all devices, providing a consistent experience for users on desktops, tablets, and smartphones.</li>
-                <li>  <b>User-Centric Focus:</b>Our development process prioritizes user experience, ensuring intuitive navigation and easy access to information, which keeps visitors engaged and encourages conversions.</li>
-                <li><b>Performance and SEO Optimization:</b>We implement best practices for performance optimization, ensuring fast load times, and integrate SEO strategies to enhance your website's visibility on search engines.</li>
-                <li> <b>Ongoing Support:</b> After your website is live, we provide ongoing support and maintenance options, ensuring your site continues to run smoothly and meets your evolving needs. </li>
-            </ol>
-            <p>By the end of our development process, you'll have a robust online presence that not only looks amazing but also performs exceptionally well. 
-                <br> <br>
-                Ready to take the next step? Check out our <b>Website Plans</b> to find the perfect solution for your business!</p>
-        </div>
+            <div class="content right">
+                <img src="https://fakeimg.pl/250x200" alt="Image 4">
+                <p>
+                    <b>6. Ongoing Support:</b> After your website is live, we provide ongoing support and maintenance options, ensuring your site continues to run smoothly and meets your evolving needs.
+                </p>
+              </div>
+
+              <p>
+                By the end of our development process, you'll have a robust online presence that not only looks amazing but also performs exceptionally well. 
+                <br> 
+Ready to take the next step? Check out our <strong>Website Plans</strong> to find the perfect solution for your business!
+              </p>
+          </div>
          </div>
 
          <div class="ad-area">

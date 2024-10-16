@@ -33,7 +33,7 @@
 /* Sidebar */
 .sidebar {
   width: 250px;
-  background-color: #ffffff;
+  background-color: #181818;
   padding: 20px;
   height: 100vh;
   border-right: 1px solid #ddd;
@@ -53,6 +53,7 @@ ul.menu li{
   padding: 10px;
   cursor: pointer;
   border-radius: 15px;
+  color: #ffffff;
   transition: background-color 0.3s ease;
 }
  div.menu{
@@ -83,7 +84,8 @@ div.menu .menu-text p.active {
 
 .menu-item.active,
 .menu-item:hover {
-  background-color: #ddd;
+  background-color: #ff3838;
+  color: #ffffff;
 }
 
 .separator {
@@ -94,10 +96,13 @@ div.menu .menu-text p.active {
 
 .sub-menu {
   margin-top: 20px;
+  color: #ffffff;
   /* padding: 10px; */
 }
 
 .sub-menu h3 {
+  color: #ffffff;
+
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -144,10 +149,15 @@ div.menu .menu-text p.active {
     text-align: left;
     font-size: 14px;
     line-height: 24px;
-    /* text-align: center; */
+    margin-bottom: 40px;
+}
+.main-container .image{
+display: flex;
+justify-content: center;    
 }
 .main-container h3{
     font-size: 24px;
+    font-weight: 500;
     margin-top: 50px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
@@ -619,6 +629,7 @@ button.offer-btn:hover {
             <a href="../digital-marketing/">
                 <li class="menu-item">
                     <i class="fas fa-check-circle"></i> Digital Marketing
+                    </li>
                 </a>
           </ul>
         </div>
@@ -651,8 +662,12 @@ button.offer-btn:hover {
     <div class="main-content">
         <div class="main-container">
             <h2>Web Application Development</h2>
-            <p>Unlock the full potential of your business with our custom web application development services! We specialize in creating powerful, scalable applications tailored to meet your unique needs.</p>
-            <h3>Our Approach To Web Application Development</h3>
+            <p>Unlock the full potential of your business with our <b>custom web application development services!</b> We create <b>powerful, scalable applications</b> tailored to your specific needs, ensuring seamless functionality and growth as your business expands. With cutting-edge technology and a focus on efficiency, our solutions help optimize your processes and enhance your digital presence, driving long-term success.</p>
+            <div class="image">
+                <img src="../images/services/web-application-service.png" alt="">
+            </div>
+
+            <h3>Our Approach To Web Application Development:</h3>
             <ol>
                 <li>  <b>In-Depth Consultation:</b> We begin by understanding your business goals and requirements, ensuring we create an application that aligns with your objectives.</li>
                 <li> <b>Custom Solutions:</b> Our team develops tailored web applications that enhance efficiency, streamline processes, and address specific challenges within your organization.</li>
@@ -663,7 +678,7 @@ button.offer-btn:hover {
             </ol>
             <p>With our expertise in web application development, you’ll have a powerful tool that enhances productivity and drives success.
                 <br> <br>
-                Ready to transform your business processes? Explore our Web Application Plans to find the ideal solution for your needs!</p>
+                Ready to transform your business processes? Explore our <b>Web Application</b> Plans to find the ideal solution for your needs!</p>
         </div>
        </div>
        
